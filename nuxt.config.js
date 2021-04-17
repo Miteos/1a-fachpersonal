@@ -47,6 +47,14 @@ export default {
     theme: {
       dark: false,
       themes: {
+        light: {
+          primary: '#003D7E',
+          secondary: '#ffffff',
+          secondary_grey: '#A7AABD',
+          secondary_darker_grey: '#737687',
+          tertiary: '#771930',
+          accent: '#B04E5E',
+        },
         dark: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,

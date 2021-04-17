@@ -1,5 +1,5 @@
 <template>
-  <section :class="{ 'services--reverse': reverse }" class="services mb-12">
+  <section :class="{ 'services--reverse': reverse }" class="services">
     <div class="services--img">
       <img src="@/static/images/frontpage/landing-2.jpg" />
     </div>

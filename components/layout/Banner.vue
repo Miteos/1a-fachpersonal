@@ -1,39 +1,73 @@
 <template>
-  <div class="banner">
+  <!--  <landing-contact v-if="$route.name === 'kontakt'" />-->
+  <div v-if="$route.name === 'index'" class="banner">
     <div class="banner--text">
-      <h1 v-if="$route.name !== 'index'">{{ $route.name }}</h1>
+      <h1 v-if="$route.name !== 'index'">{{ computedTitle }}</h1>
       <h1 v-if="$route.name === 'index'">Text text</h1>
     </div>
     <div class="img-container">
       <img src="@/static/images/frontpage/banner.png" />
     </div>
   </div>
+  <div v-else class="small-banner">
+    <div class="small-banner--text">
+      <h1 v-if="$route.name !== 'index'">
+        {{ $route.name.replace('-', ' ') }}
+      </h1>
+    </div>
+  </div>
 </template>
 
 <script>
+import landingContact from '@/components/sections/landingContact'
 export default {
   name: 'Banner',
+  components: {
+    'landing-contact': landingContact,
+  },
+  data() {
+    return {
+      small: false,
+    }
+  },
+  mounted() {
+    console.log(this.$route.name.toUpperCase())
+  },
+  computed: {
+    computedTitle() {
+      this.$route.name.toUpperCase()
+    },
+  },
 }
 </script>
 
 <style lang="scss">
 @import 'assets/styles/colors';
-.banner {
-  height: 100vh;
-  position: absolute;
+.small-banner {
+  height: 30vh;
   z-index: 0;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: linear-gradient(
-    to right bottom,
-    #003d7e 25%,
-    #004888,
-    #005393,
-    #005f9c,
-    #006aa6
-  );
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  &--text {
+    padding: 50px 50px 75px;
+    color: $secondary;
+    font-size: 32px;
+    text-transform: capitalize;
+  }
+}
+.banner {
+  height: 100vh;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
   align-items: center;

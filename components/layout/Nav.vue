@@ -1,18 +1,16 @@
 <template>
-  <v-app>
-    <nav class="navbar" id="nav">
-      <nuxt-link to="/">
-        <img src="@/static/images/logo_1.jpg" alt="logo" />
-      </nuxt-link>
-      <ul>
-        <NuxtLink v-for="l in links" :to="l.to"
-          ><li class="nav-links">
-            {{ l.title }}
-          </li></NuxtLink
-        >
-      </ul>
-    </nav>
-  </v-app>
+  <nav class="navbar" id="nav">
+    <nuxt-link to="/">
+      <img src="@/static/images/logo_1.jpg" alt="logo" />
+    </nuxt-link>
+    <ul>
+      <NuxtLink v-for="l in links" :to="l.to"
+        ><li class="nav-links">
+          {{ l.title }}
+        </li></NuxtLink
+      >
+    </ul>
+  </nav>
 </template>
 
 <script>
@@ -39,7 +37,7 @@ export default {
         {
           id: 4,
           title: 'Über uns',
-          to: '/uber-uns',
+          to: '/über-uns',
         },
         {
           id: 4,
