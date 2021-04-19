@@ -42,7 +42,7 @@ export default {
         this.$route.path === '/arbeitspl%C3%A4tze/webentwickler-php-javascript'
       )
         return 'arbeitsplätze'
-      if (this.$route.name !== '/') return this.$route.name.replace('-', ' ')
+      if (this.$route.name !== '/') return this.$route.name
     },
   },
 }
