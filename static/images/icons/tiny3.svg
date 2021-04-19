@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>noun_Time_424424</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="35.4008764%" cy="7.32434468%" fx="35.4008764%" fy="7.32434468%" r="98.9706575%" id="radialGradient-1">
+            <stop stop-color="#FB6964" offset="0%"></stop>
+            <stop stop-color="#FC4443" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pojedinacni_posao" transform="translate(-352.000000, -742.000000)" fill="url(#radialGradient-1)" fill-rule="nonzero">
+            <g id="noun_Time_424424" transform="translate(352.000000, 742.000000)">
+                <path d="M10,0 C15.5225,0 20,4.476875 20,10 C20,15.523125 15.5225,20 10,20 C4.4775,20 0,15.523125 0,10 C0,4.476875 4.4775,0 10,0 Z M8.69736842,10.3026316 C8.69736842,10.9929875 9.25701248,11.5526316 9.94736842,11.5526316 C10.6377244,11.5526316 11.1973684,10.9929875 11.1973684,10.3026316 L11.1973684,4.80263158 C11.1973684,4.11227564 10.6377244,3.55263158 9.94736842,3.55263158 C9.25701248,3.55263158 8.69736842,4.11227564 8.69736842,4.80263158 L8.69736842,10.3026316 Z M8.69736842,14.8026316 C8.69736842,15.4929875 9.25701248,16.0526316 9.94736842,16.0526316 C10.6377244,16.0526316 11.1973684,15.4929875 11.1973684,14.8026316 C11.1973684,14.1122756 10.6377244,13.5526316 9.94736842,13.5526316 C9.25701248,13.5526316 8.69736842,14.1122756 8.69736842,14.8026316 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

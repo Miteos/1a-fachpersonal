@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="19px" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="35.4008764%" cy="7.32434468%" fx="35.4008764%" fy="7.32434468%" r="122.419891%" gradientTransform="translate(0.354009,0.073243),scale(1.000000,0.789474),rotate(73.517404),translate(-0.354009,-0.073243)" id="radialGradient-1">
+            <stop stop-color="#FF7338" offset="0%"></stop>
+            <stop stop-color="#F54732" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="naslovna_strana" transform="translate(-988.000000, -723.000000)" fill="url(#radialGradient-1)">
+            <path d="M995.5,723 C999.646429,723 1003,725.831021 1003,729.331357 C1003,731.917617 1001.33141,735.707351 997.994217,740.700559 C997.775433,741.027911 997.49435,741.308994 997.166998,741.527778 C995.789478,742.448438 993.926436,742.078079 993.005781,740.700557 C989.668594,735.70735 988,731.917617 988,729.331357 C988,725.831021 991.353572,723 995.5,723 Z M995.499996,732.956138 C997.193911,732.956138 998.568681,731.615365 998.568681,729.963337 C998.568681,728.311312 997.193911,726.970537 995.499996,726.970537 C993.806087,726.970537 992.431317,728.311312 992.431317,729.963337 C992.431317,731.615365 993.806087,732.956138 995.499996,732.956138 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

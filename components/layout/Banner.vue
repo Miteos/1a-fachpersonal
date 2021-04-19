@@ -12,7 +12,7 @@
   <div v-else class="small-banner">
     <div class="small-banner--text">
       <h1 v-if="$route.name !== 'index'">
-        {{ $route.name.replace('-', ' ') }}
+        {{ computedSmallTitle }}
       </h1>
     </div>
   </div>
@@ -31,11 +31,18 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$route.name.toUpperCase())
+    console.log(this.$route)
   },
   computed: {
     computedTitle() {
       this.$route.name.toUpperCase()
+    },
+    computedSmallTitle() {
+      if (
+        this.$route.path === '/arbeitspl%C3%A4tze/webentwickler-php-javascript'
+      )
+        return 'arbeitsplätze'
+      if (this.$route.name !== '/') return this.$route.name.replace('-', ' ')
     },
   },
 }

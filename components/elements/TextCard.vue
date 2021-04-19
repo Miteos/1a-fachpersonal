@@ -17,6 +17,9 @@
       <v-card-text v-if="text3" class="font--larger">
         {{ text3 }}
       </v-card-text>
+      <v-card-text v-if="text4" class="font--larger">
+        {{ text4 }}
+      </v-card-text>
     </div>
   </div>
 </template>
@@ -32,6 +35,7 @@ export default {
     text1: '',
     text2: '',
     text3: '',
+    text4: '',
   },
 }
 </script>

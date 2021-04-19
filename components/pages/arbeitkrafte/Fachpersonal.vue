@@ -30,7 +30,7 @@
 <script>
 import TextCard from '@/components/elements/TextCard'
 export default {
-  name: 'recruitment',
+  name: 'fachpersonal',
   components: {
     'text-card': TextCard,
   },

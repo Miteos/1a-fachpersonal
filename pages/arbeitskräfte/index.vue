@@ -25,14 +25,14 @@
         </div>
         <div v-if="activeTab === 'Karriereplanung'" class="content">
           <h1>{{ tabs.Karriereplanung.title }}</h1>
-          <personnel />
+          <career />
         </div>
         <div
           v-if="activeTab === 'Personalvermittlung'"
           class="content animateLeft"
         >
           <h1>{{ tabs.Personalvermittlung.title }}</h1>
-          <recruitment />
+          <recruits />
         </div>
       </div>
     </article>
@@ -41,10 +41,14 @@
 
 <script>
 import Fachpersonal from '@/components/pages/arbeitkrafte/Fachpersonal.vue'
+import Carrer from '@/components/pages/arbeitkrafte/Career.vue'
+import Recruits from '@/components/pages/arbeitkrafte/Recruits.vue'
 
 export default {
   components: {
     fachpersonal: Fachpersonal,
+    career: Carrer,
+    recruits: Recruits,
     TabContent: {
       props: {
         data: Object,
