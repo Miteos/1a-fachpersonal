@@ -17,6 +17,9 @@
     "lodash": "^4.17.21",
     "nuxt": "^2.15.3"
   },
+  "engines": {
+    "node": "15.14.0"
+  },
   "devDependencies": {
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
