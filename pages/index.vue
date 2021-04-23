@@ -11,7 +11,7 @@
 
 <script>
 import landingServicesCompany from '@/components/sections/landingServicesCompany'
-import landingServicesJobseeker from '@/components/sections/landingServicesJobseeker'
+import landingServicesJobSeeker from '@/components/sections/landingServicesJobSeeker'
 import landingJobs from '@/components/sections/landingJobs'
 import landingCarousel from '@/components/sections/landingCarousel'
 import landingBoxes from '@/components/sections/landingBoxes'
@@ -19,7 +19,7 @@ import landingContact from '@/components/sections/landingContact'
 export default {
   components: {
     'landing-services-company': landingServicesCompany,
-    'landing-services-jobseeker': landingServicesJobseeker,
+    'landing-services-jobseeker': landingServicesJobSeeker,
     'landing-jobs': landingJobs,
     'landing-carousel': landingCarousel,
     'landing-boxes': landingBoxes,
