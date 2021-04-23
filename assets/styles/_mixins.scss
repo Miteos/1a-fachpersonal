@@ -1,3 +1,6 @@
+@mixin biggermonitors{
+  @media screen and (max-width: 1782px){ @content;}
+}
 @mixin highresmonitors{
   @media screen and (max-width: 1400px){ @content;}
 }

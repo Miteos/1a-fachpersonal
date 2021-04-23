@@ -1,12 +1,22 @@
 <template>
-  <!--  <landing-contact v-if="$route.name === 'kontakt'" />-->
   <div v-if="$route.name === 'index'" class="banner">
+    <div class="banner img-container" v-if="$vuetify.breakpoint.mdAndUp">
+      <v-img
+        contain
+        :height="$vuetify.breakpoint.mdAndDown ? 400 : 600"
+        width="auto"
+        src="/images/frontpage/banner_2.png"
+      />
+    </div>
     <div class="banner--text">
       <h1 v-if="$route.name !== 'index'">{{ computedTitle }}</h1>
-      <h1 v-if="$route.name === 'index'">Text text</h1>
-    </div>
-    <div class="img-container">
-      <img src="@/static/images/frontpage/banner.png" />
+      <h1 v-if="$route.name === 'index'">
+        Rekrutierung - Arbeitssuche - HR
+        <!--        Wir sind hier,<br />-->
+        <!--        um die Einstellung und Arbeitssuche ein wenig zu vereinfachen.<br />-->
+        <!--        Lass es uns versuchen.-->
+      </h1>
+      <grey-btn text="kontaktiere uns" to="/kontakt" />
     </div>
   </div>
   <div v-else class="small-banner">
@@ -20,10 +30,12 @@
 
 <script>
 import landingContact from '@/components/sections/landingContact'
+import greyBtn from '@/components/elements/buttons/greyBtn'
 export default {
   name: 'Banner',
   components: {
     'landing-contact': landingContact,
+    greyBtn,
   },
   data() {
     return {
@@ -50,6 +62,7 @@ export default {
 
 <style lang="scss">
 @import 'assets/styles/colors';
+@import 'assets/styles/mixins';
 .small-banner {
   height: 30vh;
   z-index: 0;
@@ -64,7 +77,7 @@ export default {
   &--text {
     padding: 50px 50px 75px;
     color: $secondary;
-    font-size: 32px;
+    font-size: 28px;
     text-transform: capitalize;
   }
 }
@@ -78,18 +91,76 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  @include phones {
+    height: 65vh;
+  }
+  @include tablets {
+    flex-direction: column;
+  }
   & .img-container {
+    width: 40%;
+    margin-top: 100px;
+    @include tablets {
+      width: 80%;
+    }
     & img {
-      max-height: 900px;
+      max-height: 800px;
       border-radius: 50px;
       background-repeat: no-repeat;
       background-size: cover;
+      @include tablets {
+        max-height: 400px;
+        width: 80%;
+      }
     }
   }
   &--text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.7em;
+    width: 50%;
+    height: 50vh;
     color: $secondary;
-    font-size: 42px;
+    font-size: 20px;
+    text-align: left;
+    @include biggermonitors {
+      font-size: 18px;
+    }
+    @include highresmonitors {
+      font-size: 16px;
+    }
+    @include lowresmonitors {
+      font-size: 14px;
+    }
+    @include tablets {
+      width: 100%;
+      font-size: 18px;
+      height: 80vh;
+    }
+    @include phones {
+      width: 100%;
+      font-size: 16px;
+    }
+    @include smallphones {
+      width: 100%;
+      font-size: 12px;
+    }
+    & h1 {
+      padding-bottom: 100px;
+      @include phones {
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 30px;
+      }
+      @include smallphones {
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+    }
   }
 }
 </style>

@@ -15,81 +15,83 @@
         </v-card-title>
         <template v-for="item in category.items">
           <div v-if="item.content" :key="item.title" class="details_holder">
-            <div class="details_holder_left details_holder_p">
-              {{ item.title }}
+            <div class="details_holder_p">
+              <div>
+                <slot name="description" />
+              </div>
             </div>
-            <div class="details_holder_right details_holder_p">
-              <span v-if="item.type === 'text'">{{ item.content }}</span>
-              <p
-                v-else-if="item.type === 'html'"
-                style="white-space: pre-wrap"
-                v-html="item.content"
-              ></p>
-            </div>
+            <!--            <div class="details_holder_right details_holder_p">-->
+            <!--              <span v-if="item.type === 'text'">{{ item.content }}</span>-->
+            <!--              <p-->
+            <!--                v-else-if="item.type === 'html'"-->
+            <!--                style="white-space: pre-wrap"-->
+            <!--                v-html="item.content"-->
+            <!--              ></p>-->
+            <!--            </div>-->
           </div>
         </template>
       </v-card>
     </template>
-    <template v-if="!jobHtml">
-      <v-card
-        v-for="emp in employee"
-        :key="emp.title"
-        style="margin-top: 30px"
-        class="form_cards_full_radial"
-      >
-        <v-card-title class="card_header_small">
-          <img
-            style="padding-right: 18px; padding-left: 10px"
-            src="@/static/images/icons/info_e.svg"
-          />{{ emp.title }}
-        </v-card-title>
-        <template v-for="item in emp.items">
-          <div v-if="item.content" :key="item.title" class="details_holder">
-            <div class="details_holder_left details_holder_p">
-              {{ item.title }}
-            </div>
-            <div class="details_holder_right details_holder_p">
-              <span v-if="item.type === 'text'">{{ item.content }}</span>
-              <p
-                v-else-if="item.type === 'html'"
-                style="white-space: pre-wrap"
-                v-html="item.content"
-              ></p>
-            </div>
-          </div>
-        </template>
-      </v-card>
-    </template>
-    <template v-if="!jobHtml">
-      <v-card
-        v-for="con in contact"
-        :key="con.title"
-        style="margin-top: 30px"
-        class="form_cards_full_radial"
-      >
-        <v-card-title class="card_header_small">
-          <img
-            style="padding-right: 18px; padding-left: 10px"
-            src="@/static/images/icons/info_contact.svg"
-          />{{ con.title }}
-        </v-card-title>
-        <template v-for="item in con.items">
-          <div v-if="item.content" :key="item.title" class="details_holder">
-            <div class="details_holder_left details_holder_p">
-              {{ item.title }}
-            </div>
-            <div class="details_holder_right details_holder_p">
-              <span v-if="item.type === 'text'">{{ item.content }}</span>
-              <p
-                v-else-if="item.type === 'html'"
-                style="white-space: pre-wrap"
-                v-html="item.content"
-              ></p>
-            </div>
-          </div>
-        </template>
-      </v-card>
-    </template>
+    <!--    <template v-if="!jobHtml">-->
+    <!--      <v-card-->
+    <!--        v-for="emp in employee"-->
+    <!--        :key="emp.title"-->
+    <!--        style="margin-top: 30px"-->
+    <!--        class="form_cards_full_radial"-->
+    <!--      >-->
+    <!--        <v-card-title class="card_header_small">-->
+    <!--          <img-->
+    <!--            style="padding-right: 18px; padding-left: 10px"-->
+    <!--            src="@/static/images/icons/info_e.svg"-->
+    <!--          />{{ emp.title }}-->
+    <!--        </v-card-title>-->
+    <!--        <template v-for="item in emp.items">-->
+    <!--          <div v-if="item.content" :key="item.title" class="details_holder">-->
+    <!--            <div class="details_holder_left details_holder_p">-->
+    <!--              {{ item.title }}-->
+    <!--            </div>-->
+    <!--            <div class="details_holder_right details_holder_p">-->
+    <!--              <span v-if="item.type === 'text'">{{ item.content }}</span>-->
+    <!--              <p-->
+    <!--                v-else-if="item.type === 'html'"-->
+    <!--                style="white-space: pre-wrap"-->
+    <!--                v-html="item.content"-->
+    <!--              ></p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </template>-->
+    <!--      </v-card>-->
+    <!--    </template>-->
+    <!--    <template v-if="!jobHtml">-->
+    <!--      <v-card-->
+    <!--        v-for="con in contact"-->
+    <!--        :key="con.title"-->
+    <!--        style="margin-top: 30px"-->
+    <!--        class="form_cards_full_radial"-->
+    <!--      >-->
+    <!--        <v-card-title class="card_header_small">-->
+    <!--          <img-->
+    <!--            style="padding-right: 18px; padding-left: 10px"-->
+    <!--            src="@/static/images/icons/info_contact.svg"-->
+    <!--          />{{ con.title }}-->
+    <!--        </v-card-title>-->
+    <!--        <template v-for="item in con.items">-->
+    <!--          <div v-if="item.content" :key="item.title" class="details_holder">-->
+    <!--            <div class="details_holder_left details_holder_p">-->
+    <!--              {{ item.title }}-->
+    <!--            </div>-->
+    <!--            <div class="details_holder_right details_holder_p">-->
+    <!--              <span v-if="item.type === 'text'">{{ item.content }}</span>-->
+    <!--              <p-->
+    <!--                v-else-if="item.type === 'html'"-->
+    <!--                style="white-space: pre-wrap"-->
+    <!--                v-html="item.content"-->
+    <!--              ></p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </template>-->
+    <!--      </v-card>-->
+    <!--    </template>-->
   </div>
 </template>
 
@@ -177,7 +179,7 @@ export default {
       categories: [
         {
           icon: '',
-          title: 'O poslu',
+          title: 'Über die Arbeit',
           items: [
             {
               title: 'Opis radnog mjesta',
@@ -390,7 +392,7 @@ export default {
   p {
     letter-spacing: 0.2px;
     text-align: left !important;
-    font-weight: 100;
+    font-weight: 400;
     color: #333333;
     padding: 0 !important;
     word-break: break-word;

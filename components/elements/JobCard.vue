@@ -1,50 +1,92 @@
 <template>
-  <v-card class="job_form_card">
-    <h1 class="card_title">
-      {{ jobName }}
-    </h1>
-    <v-spacer></v-spacer>
-    <div class="inner_followed">
-      <v-row>
-        <v-col class="d-flex py-2" cols="5" lg="2" md="3" sm="3">
-          <img class="pr-2" src="@/static/images/icons/tiny1.svg" />
-          Poslodavac:
-        </v-col>
-        <v-col class="py-2" cols="7" lg="10" md="9" sm="9">
-          <h4 style="font-weight: 400; color: #2e9adc">
-            {{ jobBranch }}
-          </h4>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col class="py-2" cols="5" lg="2" md="3" sm="3">
-          <div class="d-flex">
-            <img class="pr-2" src="@/static/images/icons/tiny5.svg" />
-            <span>Kategorija:</span>
-          </div>
-        </v-col>
-        <v-col
-          cols="7"
-          lg="10"
-          md="9"
-          sm="9"
-          class="py-2"
-          style="margin-top: 4px; line-height: 1.4em"
-        >
-          {{ jobCategories }}
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col class="d-flex py-2" cols="5" lg="2" md="3" sm="3">
-          <img class="pr-2" src="@/static/images/icons/tiny6.svg" />
-          <span>Mjesto rada:</span>
-        </v-col>
-        <v-col class="py-2" cols="7" lg="10" md="9" sm="9">{{
-          jobLocation
-        }}</v-col>
-      </v-row>
-    </div>
-  </v-card>
+  <v-row>
+    <v-col cols="9">
+      <v-card class="job_form_card">
+        <h1 class="card_title">
+          {{ jobName }}
+        </h1>
+        <v-spacer></v-spacer>
+        <div class="inner_followed">
+          <v-row>
+            <v-col class="d-flex py-2" cols="5" lg="2" md="3" sm="3">
+              <img
+                class="pr-2"
+                style="max-height: 20px"
+                src="@/static/images/icons/tiny1.svg"
+              />
+
+              Arbeitgeber:
+            </v-col>
+            <v-col class="py-2" cols="7" lg="10" md="9" sm="9">
+              <h4 style="font-weight: 400; color: #2e9adc">
+                {{ jobBranch }}
+              </h4>
+            </v-col>
+          </v-row>
+          <v-spacer></v-spacer>
+          <v-row>
+            <v-col class="py-2" cols="5" lg="2" md="3" sm="3">
+              <div class="d-flex">
+                <img
+                  class="pr-2"
+                  style="max-height: 20px"
+                  src="@/static/images/icons/tiny5.svg"
+                />
+                <span>Kategorie:</span>
+              </div>
+            </v-col>
+            <v-col
+              cols="7"
+              lg="10"
+              md="9"
+              sm="9"
+              class="py-2"
+              style="margin-top: 4px; line-height: 1.4em"
+            >
+              {{ jobCategories }}
+            </v-col>
+          </v-row>
+          <v-spacer></v-spacer>
+          <v-row>
+            <v-col class="d-flex py-2" cols="5" lg="2" md="3" sm="3">
+              <img
+                class="pr-2"
+                style="max-height: 20px"
+                src="@/static/images/icons/tiny6.svg"
+              />
+              <span> Arbeitsplatz:</span>
+            </v-col>
+            <v-col class="py-2" cols="7" lg="10" md="9" sm="9">{{
+              jobLocation
+            }}</v-col>
+          </v-row>
+        </div>
+      </v-card>
+    </v-col>
+    <v-col cols="3">
+      <v-card height="233px" class="job_form_card">
+        <h1 class="card_title py-2">Kontakt</h1>
+        <v-card-text class="d-flex align-center flex-column">
+          <v-btn width="300" dark color="primary">
+            <v-icon class="pr-2">mdi-mail</v-icon>
+            <a
+              style="color: white; text-decoration: none"
+              href="mailto:pasu@1a-fachpersonal.de"
+              >pasu@1a-fachpersonal.de</a
+            >
+          </v-btn>
+          <v-btn width="300" dark color="primary" class="my-3">
+            <v-icon class="pr-2">mdi-phone</v-icon>
+            <a
+              style="color: white; text-decoration: none"
+              href="tel:+49 17631795158 "
+              >+49 17631795158
+            </a>
+          </v-btn>
+        </v-card-text>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -176,12 +218,16 @@ export default {
   background: #fff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  margin-top: 30px;
+  margin-top: 20px;
   @media screen and (max-width: 480px) {
     padding: 20px;
   }
 }
 .inner_followed {
+  min-height: 120px;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 </style>

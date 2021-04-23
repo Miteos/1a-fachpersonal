@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="pa-10">
+  <v-container fluid class="pa-10" style="min-height: 100vh">
     <v-row class="ma-0 d-flex justify-center">
       <v-col cols="5">
         <v-text-field
@@ -20,6 +20,7 @@
       <v-row>
         <v-col cols="12" class="pb-0">
           <v-data-table
+            style="min-height: max-content"
             :items-per-page="10"
             :search="search"
             :headers="headers"
@@ -32,7 +33,11 @@
                 <td v-if="$vuetify.breakpoint.mdAndUp">
                   <img :src="item.img" />
                 </td>
-                <td>{{ item.job }}</td>
+                <td>
+                  <nuxt-link e :to="'arbeitsplätze' + item.to">{{
+                    item.job
+                  }}</nuxt-link>
+                </td>
                 <td class="text-center">{{ item.date }}</td>
                 <td class="text-center">{{ item.clicks }}</td>
               </tr>
@@ -71,30 +76,35 @@ export default {
           date: '15. Februar 2021',
           clicks: 28,
           img: '/images/jobs/jobs_1.jpg',
+          to: '/full-stack-entwickler',
         },
         {
           job: 'Java Entwickler (m / w / d) - Individuelle Software',
           date: '15. Februar 2021',
           clicks: 30,
           img: '/images/jobs/jobs_4.jpg',
+          to: '/java-entwickler-individuelle-software',
         },
         {
           job: 'IT Support Engineer (m/w/d)',
           date: '01. Februar 2021',
           clicks: 46,
           img: '/images/jobs/jobs_3.jpg',
+          to: '/it-support-engineer',
         },
         {
           job: 'Webentwickler (m/w/d) PHP / JavaScript',
           date: '01. Februar 2021',
           clicks: 36,
           img: '/images/jobs/jobs_2.jpg',
+          to: '/webentwickler-php-javascript',
         },
         {
           job: 'IT-Administrator 2nd Level (m/w/d)',
           date: '01. Februar 2021',
           clicks: 35,
           img: '/images/jobs/jobs_5.jpg',
+          to: '/it-administrator',
         },
       ],
     }
@@ -112,7 +122,6 @@ export default {
   }
   &:hover {
     background-color: #ededed;
-    cursor: pointer;
     transition: 0.3s ease-out;
   }
   & td {

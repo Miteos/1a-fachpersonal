@@ -8,7 +8,7 @@
           Have a few questions you want to ask? Do you want to know about the
           recruitment process? Drop us a note, text, or call.
         </p>
-        <v-row v-for="items in info" class="py-4">
+        <v-row v-for="items in info" :key="items.icon" class="py-4">
           <v-col cols="1"
             ><v-icon
               size="45"
