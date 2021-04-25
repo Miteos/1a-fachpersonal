@@ -138,6 +138,7 @@ export default {
   min-height: 500px;
   width: 100%;
   display: flex;
+  overflow-y: hidden;
   flex-direction: row;
   &--left {
     background-color: $background-grey;

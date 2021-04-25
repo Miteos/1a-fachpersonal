@@ -70,6 +70,7 @@ export default {
 .services {
   display: flex;
   flex-wrap: wrap;
+  overflow-y: hidden;
   background-color: $background-grey;
   &--reverse {
     flex-direction: row-reverse;
