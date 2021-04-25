@@ -1,29 +1,41 @@
 <template>
-  <section class="landing-boxes py-12">
-    <div class="landing-boxes--title">
-      <h2>Unsere Erfahrung im Umgang mit Arbeitgebern und Arbeitnehmern.</h2>
-    </div>
-    <div class="landing-boxes--cards">
-      <v-card
-        rounded
-        class="rounded-lg"
-        hover
-        elevation="5"
-        v-for="c in cards"
-        :key="c.id"
-      >
-        <v-card-title
-          style="font-size: 72px"
-          class="d-flex justify-center pa-12"
+  <v-container fluid class="pa-0">
+    <section class="landing-boxes py-12">
+      <div class="landing-boxes--title">
+        <h2>Unsere Erfahrung im Umgang mit Arbeitgebern und Arbeitnehmern.</h2>
+      </div>
+      <v-row style="width: 100%" justify="center">
+        <v-col
+          v-for="c in cards"
+          :key="c.id"
+          xl="3"
+          lg="3"
+          md="7"
+          sm="8"
+          cols="12"
         >
-          {{ c.title }}</v-card-title
-        >
-        <v-card-text class="d-flex justify-center pa-5" style="font-size: 24px"
-          >{{ c.text }}
-        </v-card-text>
-      </v-card>
-    </div>
-  </section>
+          <v-card
+            rounded
+            hover
+            elevation="3"
+            class="landing-boxes--cards rounded-lg"
+          >
+            <v-card-title
+              style="font-size: 50px"
+              :style="{ 'font-size: 72px': $vuetify.breakpoint.mdAndDown }"
+              class="d-flex justify-center pa-9"
+              :class="{ 'pa-6': $vuetify.breakpoint.mdAndDown }"
+            >
+              {{ c.title }}</v-card-title
+            >
+            <v-card-text class="d-flex text-center justify-center pa-5"
+              >{{ c.text }}
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </section>
+  </v-container>
 </template>
 
 <script>
@@ -55,6 +67,7 @@ export default {
 
 <style lang="scss" scoped>
 @import 'assets/styles/colors';
+@import 'assets/styles/mixins';
 .landing-boxes {
   display: flex;
   flex-direction: column;
@@ -68,6 +81,12 @@ export default {
     font-size: 45px !important;
     & h2 {
       font-size: 45px;
+      @include phones {
+        font-size: 26px;
+      }
+      @include smallphones {
+        font-size: 22px;
+      }
     }
     & p {
       padding-top: 20px;
@@ -75,14 +94,21 @@ export default {
     }
   }
   &--cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 400px;
-    font-size: 24px;
+    min-height: 250px;
+    min-width: 100%;
+    font-size: 18px;
     margin: 100px 0;
+    @include highresmonitors {
+      margin: 25px 0;
+    }
+    @include phones {
+      font-size: 16px;
+      margin: 20px 0;
+    }
     & .v-card__text {
       font-size: 18px;
     }

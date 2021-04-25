@@ -1,36 +1,44 @@
 <template>
-  <section class="landing-jobs pt-12">
-    <div class="landing-jobs--title">
-      <h2>Ausgewählte Jobs</h2>
-      <p>
-        Hier sind einige Möglichkeiten mit den besten Unternehmen auf dem
-        heutigen Markt. Treten Sie unserem Netzwerk bei und wir können
-        zusammenarbeiten, um herauszufinden, was zu Ihnen passt.
-      </p>
-    </div>
-    <div class="landing-jobs--cards">
-      <v-card v-for="c in cards" :key="c.id" hover>
-        <div>
-          <img :src="c.img" />
-        </div>
-        <v-card-title> {{ c.title }}</v-card-title>
-        <v-divider></v-divider>
-        <v-card-text>{{ c.text }} </v-card-text>
-        <v-list>
-          <v-list-item class="pl-0">
-            <v-list-item-icon><v-icon>mdi-account</v-icon></v-list-item-icon>
-            <p class="ma-0">{{ c.vacancies }}</p></v-list-item
-          >
-          <v-list-item class="pl-0">
-            <v-list-item-icon
-              ><v-icon>mdi-clock-time-four-outline</v-icon></v-list-item-icon
-            >
-            <p class="ma-0">{{ c.type }}</p>
-          </v-list-item>
-        </v-list>
-      </v-card>
-    </div>
-  </section>
+  <v-container fluid class="pa-0">
+    <section class="landing-jobs pt-12">
+      <div class="landing-jobs--title">
+        <h2>Ausgewählte Jobs</h2>
+        <p>
+          Hier sind einige Möglichkeiten mit den besten Unternehmen auf dem
+          heutigen Markt. Treten Sie unserem Netzwerk bei und wir können
+          zusammenarbeiten, um herauszufinden, was zu Ihnen passt.
+        </p>
+      </div>
+      <v-row style="width: 100%">
+        <v-col v-for="c in cards" :key="c.id" xl="4" lg="4" md="12">
+          <v-card hover class="landing-jobs--cards">
+            <div>
+              <v-img :src="c.img" />
+            </div>
+            <v-card-title> {{ c.title }}</v-card-title>
+            <v-divider></v-divider>
+            <v-card-text>{{ c.text }} </v-card-text>
+            <v-list>
+              <v-list-item class="pl-0">
+                <v-list-item-icon
+                  ><v-icon>mdi-account</v-icon></v-list-item-icon
+                >
+                <p class="ma-0">{{ c.vacancies }}</p></v-list-item
+              >
+              <v-list-item class="pl-0">
+                <v-list-item-icon
+                  ><v-icon
+                    >mdi-clock-time-four-outline</v-icon
+                  ></v-list-item-icon
+                >
+                <p class="ma-0">{{ c.type }}</p>
+              </v-list-item>
+            </v-list>
+          </v-card>
+        </v-col>
+      </v-row>
+    </section>
+  </v-container>
 </template>
 
 <script>
@@ -73,6 +81,7 @@ export default {
 
 <style lang="scss" scoped>
 @import 'assets/styles/colors';
+@import 'assets/styles/mixins';
 .landing-jobs {
   display: flex;
   flex-direction: column;
@@ -93,21 +102,32 @@ export default {
     color: $secondary;
     & h2 {
       font-size: 45px;
+      @include phones {
+        font-size: 32px;
+        margin: 20px 0 20px 0;
+      }
     }
     & p {
       padding-top: 20px;
       margin: 0 !important;
+      @include phones {
+        padding: 10px;
+      }
     }
   }
   &--cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
     justify-content: center;
     align-items: center;
-    max-width: 400px;
     font-size: 18px;
     margin: 100px 0;
+    @include highresmonitors {
+      font-size: 16px;
+      margin: 50px 0;
+    }
+    @include phones {
+      font-size: 16px;
+      margin: 20px 0;
+    }
     & img {
       min-width: 200px;
       height: 350px;

@@ -5,7 +5,7 @@
   @media screen and (max-width: 1400px){ @content;}
 }
 @mixin lowresmonitors{
-  @media screen and (max-width: 1200px){ @content;}
+  @media screen and (max-width: 1260px){ @content;}
 }
 
 @mixin tablets{
@@ -15,7 +15,9 @@
 @mixin phones{
   @media screen and (max-width: 820px){ @content; }
 }
-
+@mixin midphones{
+  @media screen and (max-width: 620px){ @content;}
+}
 @mixin smallphones{
-  @media screen and (max-width: 420px){ @content; }
+  @media screen and (max-width: 440px){ @content; }
 }

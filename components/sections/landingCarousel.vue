@@ -1,21 +1,14 @@
 <template>
   <v-carousel
     cycle
-    height="600"
+    :height="$vuetify.breakpoint.xs ? 400 : 600"
     hide-delimiter-background
     show-arrows-on-hover
     class="background-image"
   >
     <v-carousel-item v-for="(slide, i) in slides" :key="i">
       <v-row class="fill-height" align="center" justify="center">
-        <div
-          class="display-3 text--center"
-          style="
-            font-size: 32px !important;
-            max-width: 800px;
-            text-align: center;
-          "
-        >
+        <div class="text--center carousel-text">
           {{ slide }}
         </div>
       </v-row>
@@ -47,6 +40,7 @@ export default {
 }
 </script>
 <style lang="scss">
+@import 'assets/styles/mixins';
 .background-image {
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -55,5 +49,18 @@ export default {
   /*background-size: 100% 20%;*/
   background-position: center;
   background-repeat: no-repeat;
+}
+.carousel-text {
+  font-size: 32px !important;
+  max-width: 800px;
+  text-align: center;
+  @include tablets {
+    font-size: 26px !important;
+    padding: 30px;
+  }
+  @include smallphones {
+    font-size: 16px !important;
+    padding: 30px;
+  }
 }
 </style>

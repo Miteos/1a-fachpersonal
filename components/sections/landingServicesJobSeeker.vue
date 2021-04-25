@@ -42,8 +42,9 @@
               width="200"
               :height="$vuetify.breakpoint.lgAndDown ? 35 : 40"
               color="#003D7E"
+              to="/arbeitskräfte"
               style="margin-top: 10px"
-              >Read more</v-btn
+              >Weiterlesen</v-btn
             >
           </div>
         </v-col>
