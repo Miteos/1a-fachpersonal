@@ -1,13 +1,13 @@
 <template>
   <v-container :fluid="$vuetify.breakpoint.lgAndDown">
     <v-row class="ma-0">
-      <v-col cols="12" xl="8" lg="9" md="10" sm="12" class="px-0">
+      <v-col cols="12" xl="8" lg="9" md="12" sm="12" class="px-0">
         <div class="mb-5">
           <v-card-title class="about--title">
             Alles was Sie über uns wissen sollten!
           </v-card-title>
           <v-divider
-            inset
+            :inset="$vuetify.breakpoint.lgAndUp"
             :style="{ borderColor: $vuetify.theme.themes.light.secondary }"
           />
           <v-card-text class="font--larger">
@@ -28,7 +28,7 @@
                 >
                 Individuell an Ihre Wünsche angepasst</v-list-item
               >
-              <v-list-item class="about--text py-3">
+              <v-list-item class="about--text pt-3">
                 <v-list-item-icon
                   ><v-icon :size="$vuetify.breakpoint.xs ? 25 : 50"
                     >mdi-professional-hexagon</v-icon
@@ -46,7 +46,6 @@
         <v-col xl="5" lg="6" md="12" class="px-0">
           <v-img
             style="border-radius: 10px"
-            class="mt-5"
             src="/images/about-us/about_1.jpg"
           />
         </v-col>
@@ -54,7 +53,7 @@
           <div>
             <v-card-title class="about--title">Unser Ziel</v-card-title>
             <v-divider
-              inset
+              :inset="$vuetify.breakpoint.lgAndUp"
               :style="{ borderColor: $vuetify.theme.themes.light.secondary }"
             />
             <v-card-text class="font font--larger about--text"
@@ -71,12 +70,12 @@
           </div>
         </v-col>
       </v-row>
-      <v-row class="ma-0 flex-xl-row flex-md-column-reverse">
+      <v-row class="ma-0 column-reverse">
         <v-col xl="7" lg="6" md="12" class="pl-0">
           <div>
             <v-card-title class="about--title">Unser Service</v-card-title>
             <v-divider
-              inset
+              :inset="$vuetify.breakpoint.lgAndUp"
               :style="{ borderColor: $vuetify.theme.themes.light.secondary }"
             />
             <v-card-text class="font font--larger about--text"
@@ -116,6 +115,7 @@
   &--title {
     color: $secondary;
     font-size: 36px;
+    word-break: break-word;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 20px;
@@ -123,12 +123,15 @@
       font-size: 24px;
       margin-bottom: 0;
       margin-top: 0;
+      display: flex;
+      justify-content: center;
     }
     @include midphones {
-      font-size: 16px;
+      font-size: 18px;
     }
     @include smallphones {
-      font-size: 15px;
+      font-size: 16px;
+      margin-right: 0;
     }
   }
   &--text {
@@ -141,6 +144,11 @@
     @include midphones {
       font-size: 14px !important;
     }
+  }
+}
+.column-reverse {
+  @include lowresmonitors {
+    flex-direction: column-reverse;
   }
 }
 </style>
