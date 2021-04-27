@@ -1,6 +1,11 @@
 <template>
-  <v-row>
-    <v-col cols="6">
+  <TabContent>
+    <template #text>
+      <v-divider
+        class="py-5"
+        :inset="$vuetify.breakpoint.lgAndUp"
+        :style="{ borderColor: $vuetify.theme.themes.light.primary }"
+      />
       <div>
         <ul v-for="(l, i) in list" :key="l.i" class="pl-0 pb-5">
           <li class="font--standard ml-6 py-1" style="list-style: square">
@@ -19,22 +24,25 @@
           </v-expansion-panel>
         </v-expansion-panels>
       </div>
-    </v-col>
-    <v-col cols="6">
+    </template>
+    <template #image>
       <v-img
         contain
         src="/images/arbeitgeber/arbeit_1.jpg"
         style="width: auto; max-height: 415px"
-    /></v-col>
-  </v-row>
+      />
+    </template>
+  </TabContent>
 </template>
 
 <script>
 import TextCard from '@/components/elements/TextCard'
+import TabContent from '@/components/layout/TabContent'
 export default {
   name: 'services',
   components: {
-    'text-card': TextCard,
+    TextCard,
+    TabContent,
   },
   data() {
     return {

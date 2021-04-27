@@ -21,6 +21,7 @@
       v-if="$vuetify.breakpoint.mdAndDown"
       show-arrows
       centered
+      center-active
       v-model="tab"
     >
       <v-tabs-slider color="primary"></v-tabs-slider>

@@ -10,12 +10,7 @@
     </div>
     <div class="banner--text">
       <h1 v-if="$route.name !== 'index'">{{ computedTitle }}</h1>
-      <h1 v-if="$route.name === 'index'">
-        Rekrutierung - Arbeitssuche - HR
-        <!--        Wir sind hier,<br />-->
-        <!--        um die Einstellung und Arbeitssuche ein wenig zu vereinfachen.<br />-->
-        <!--        Lass es uns versuchen.-->
-      </h1>
+      <h1 v-if="$route.name === 'index'">Rekrutierung - Arbeitssuche - HR</h1>
       <grey-btn text="kontaktiere uns" to="/kontakt" />
     </div>
   </div>
@@ -79,6 +74,9 @@ export default {
     color: $secondary;
     font-size: 24px;
     text-transform: capitalize;
+    @include phones {
+      font-size: 16px;
+    }
   }
 }
 .banner {

@@ -1,7 +1,7 @@
 <template>
-  <v-row>
-    <v-col cols="6">
-      <text-card :text1="text1" />
+  <TabContent>
+    <template #text>
+      <TextCard :text1="text1" />
       <div>
         <ul v-for="(l, i) in list" :key="l.i" class="pl-4">
           <li class="font--larger py-3" style="list-style: none">
@@ -16,22 +16,25 @@
           </li>
         </ul>
       </div>
-    </v-col>
-    <v-col cols="6">
+    </template>
+    <template #image>
       <v-img
         contain
         src="/images/arbeitgeber/arbeit_1.jpg"
         style="width: auto; max-height: 450px"
-    /></v-col>
-  </v-row>
+      />
+    </template>
+  </TabContent>
 </template>
 
 <script>
 import TextCard from '@/components/elements/TextCard'
+import TabContent from '@/components/layout/TabContent'
 export default {
   name: 'process',
   components: {
-    'text-card': TextCard,
+    TextCard,
+    TabContent,
   },
   data() {
     return {

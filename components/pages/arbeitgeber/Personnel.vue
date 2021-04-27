@@ -1,23 +1,26 @@
 <template>
-  <v-row>
-    <v-col cols="6">
-      <text-card :text1="text1" size="5" />
-    </v-col>
-    <v-col cols="6">
+  <TabContent>
+    <template #text>
+      <TextCard :text1="text1" size="5" />
+    </template>
+    <template #image>
       <v-img
         contain
         src="/images/arbeitgeber/arbeit_1.jpg"
         style="width: auto; max-height: 415px"
-    /></v-col>
-  </v-row>
+      />
+    </template>
+  </TabContent>
 </template>
 
 <script>
 import TextCard from '@/components/elements/TextCard'
+import TabContent from '@/components/layout/TabContent'
 export default {
   name: 'personnel',
   components: {
-    'text-card': TextCard,
+    TextCard,
+    TabContent,
   },
   data() {
     return {

@@ -1,8 +1,12 @@
 <template>
   <v-container fluid class="mt-0 pt-0">
-    <div class="tabs-nav">
+    <div class="tabs-nav" v-if="$vuetify.breakpoint.lgAndUp">
       <ul>
-        <li v-for="(tab, tabName) in tabs" :key="tabName">
+        <li
+          v-for="(tab, tabName) in tabs"
+          v-if="$vuetify.breakpoint.lgAndUp"
+          :key="tabName"
+        >
           <button
             class="tab"
             @click="setTabActive(tabName)"
@@ -17,7 +21,37 @@
         </li>
       </ul>
     </div>
-    <article>
+    <v-tabs
+      v-if="$vuetify.breakpoint.mdAndDown"
+      show-arrows
+      centered
+      v-model="tab"
+    >
+      <v-tabs-slider color="primary"></v-tabs-slider>
+
+      <v-tab ripple v-for="i in tabsMobile" :key="i.tabTitle">
+        {{ i.tabTitle }}
+      </v-tab>
+    </v-tabs>
+    <v-tabs-items v-model="tab" v-if="$vuetify.breakpoint.mdAndDown">
+      <v-tab-item
+        v-for="(item, i) in tabsMobile"
+        :key="'tab_' + i"
+        class="article-container"
+      >
+        <article>
+          <div class="article-container">
+            <div class="content">
+              <h1>
+                {{ item.title }}
+              </h1>
+              <component v-bind:is="item.component" />
+            </div>
+          </div>
+        </article>
+      </v-tab-item>
+    </v-tabs-items>
+    <article v-if="$vuetify.breakpoint.lgAndUp">
       <div class="article-container" id="tab_1">
         <div v-if="activeTab === 'Industrie'" class="content">
           <h1>{{ tabs.Industrie.title }}</h1>
@@ -58,11 +92,9 @@ import Personnel from '@/components/pages/arbeitgeber/Personnel.vue'
 import Process from '@/components/pages/arbeitgeber/Process.vue'
 import Employee from '@/components/pages/arbeitgeber/Employee.vue'
 import Services from '@/components/pages/arbeitgeber/Services.vue'
-import landingServicesCompany from '@/components/sections/landingServicesCompany'
 
 export default {
   components: {
-    'landing-services-company': landingServicesCompany,
     industries: Industries,
     recruitment: Recruitment,
     personnel: Personnel,
@@ -78,6 +110,41 @@ export default {
   data() {
     return {
       changedTab: false,
+      tab: null,
+      tabsMobile: [
+        {
+          tabTitle: 'Industrie',
+          title: 'Rekrutierung für die Industrie',
+          component: Industries,
+        },
+        {
+          tabTitle: 'Personallösungen',
+          title: 'Personallösungen für Ihren Bedarf',
+          component: Recruitment,
+        },
+        {
+          tabTitle: 'Personalvermittlung',
+          title:
+            'Personalvermittlung – Kompetenz durch Spezialisierung, Erfahrung und frische Ideen!',
+          component: Personnel,
+        },
+        {
+          tabTitle: 'Prozess',
+          title: 'Vermittlung von qualifiziertem Personal aus allen Branchen',
+          component: Process,
+        },
+        {
+          tabTitle: 'Mitarbeiter',
+          title: 'Der ideale Mitarbeiter für Ihr Unternehmen',
+          component: Employee,
+        },
+        {
+          tabTitle: 'Leistungen',
+          title:
+            'Wenn Sie mit 1A-FachPersonal.de arbeiten, können Sie Folgendes erwarten:',
+          component: Services,
+        },
+      ],
       tabs: {
         Industrie: {
           title: 'Rekrutierung für die Industrie',

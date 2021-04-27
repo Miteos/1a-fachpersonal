@@ -1,8 +1,8 @@
 <template>
-  <v-row>
-    <v-col cols="6" class="pa-4">
+  <TabContent>
+    <template #text>
       <v-divider
-        inset
+        :inset="$vuetify.breakpoint.lgAndUp"
         :style="{ borderColor: $vuetify.theme.themes.light.primary }"
       />
       <v-list color="transparent">
@@ -20,9 +20,9 @@
           {{ l.text }}
         </v-list-item>
       </v-list>
-    </v-col>
-    <v-col cols="6" class="justify-end">
-      <v-row>
+    </template>
+    <template #image>
+      <v-row class="flex">
         <v-col cols="6" class="pa-4">
           <v-img
             src="/images/arbeitgeber/arbeit_1.jpg"
@@ -42,13 +42,17 @@
           />
         </v-col>
       </v-row>
-    </v-col>
-  </v-row>
+    </template>
+  </TabContent>
 </template>
 
 <script>
+import TabContent from '@/components/layout/TabContent'
 export default {
   name: 'Industries',
+  components: {
+    TabContent,
+  },
   data() {
     return {
       list: [
