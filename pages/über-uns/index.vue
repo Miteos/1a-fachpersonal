@@ -1,9 +1,9 @@
 <template>
-  <v-container>
+  <v-container :fluid="$vuetify.breakpoint.lgAndDown">
     <v-row class="ma-0">
-      <v-col cols="8">
+      <v-col cols="12" xl="8" lg="9" md="10" sm="12" class="px-0">
         <div class="mb-5">
-          <v-card-title style="font-size: 35px; color: white">
+          <v-card-title class="about--title">
             Alles was Sie über uns wissen sollten!
           </v-card-title>
           <v-divider
@@ -12,21 +12,25 @@
           />
           <v-card-text class="font--larger">
             <v-list color="transparent" dark>
-              <v-list-item flat>
+              <v-list-item flat class="about--text py-3">
                 <v-list-item-icon
-                  ><v-icon size="50">mdi-run-fast</v-icon></v-list-item-icon
+                  ><v-icon :size="$vuetify.breakpoint.xs ? 25 : 50"
+                    >mdi-run-fast</v-icon
+                  ></v-list-item-icon
                 >
                 Schnell und einfach</v-list-item
               >
-              <v-list-item
+              <v-list-item class="about--text py-3"
                 ><v-list-item-icon
-                  ><v-icon size="50">mdi-account-tie</v-icon></v-list-item-icon
+                  ><v-icon :size="$vuetify.breakpoint.xs ? 25 : 50"
+                    >mdi-account-tie</v-icon
+                  ></v-list-item-icon
                 >
                 Individuell an Ihre Wünsche angepasst</v-list-item
               >
-              <v-list-item>
+              <v-list-item class="about--text py-3">
                 <v-list-item-icon
-                  ><v-icon size="50"
+                  ><v-icon :size="$vuetify.breakpoint.xs ? 25 : 50"
                     >mdi-professional-hexagon</v-icon
                   ></v-list-item-icon
                 >
@@ -38,18 +42,22 @@
       </v-col>
     </v-row>
     <div class="about ma-0">
-      <v-row class="mt-12 ma-0" style="margin-bottom: 100px !important">
-        <v-col cols="5">
-          <img src="@/static/images/about-us/about_1.jpg" />
+      <v-row class="ma-0">
+        <v-col xl="5" lg="6" md="12" class="px-0">
+          <v-img
+            style="border-radius: 10px"
+            class="mt-5"
+            src="/images/about-us/about_1.jpg"
+          />
         </v-col>
-        <v-col cols="7">
-          <div class="mb-8">
-            <v-card-title style="font-size: 35px">Unser Ziel</v-card-title>
+        <v-col xl="7" lg="6" md="12" class="pl-0">
+          <div>
+            <v-card-title class="about--title">Unser Ziel</v-card-title>
             <v-divider
               inset
               :style="{ borderColor: $vuetify.theme.themes.light.secondary }"
             />
-            <v-card-text class="font font--larger pa-12"
+            <v-card-text class="font font--larger about--text"
               >Seit 2016 beschäftigen wir uns mit den Themen Personal,
               Personalbeschaffung und Personalmangel. Wir kommen ursprünglich
               aus der Transportbranche. Dort wurde uns schnell klar, dass
@@ -63,15 +71,15 @@
           </div>
         </v-col>
       </v-row>
-      <v-row class="ma-0 my-12">
-        <v-col cols="7">
-          <div class="mb-5">
-            <v-card-title style="font-size: 35px">Unser Service</v-card-title>
+      <v-row class="ma-0 flex-xl-row flex-md-column-reverse">
+        <v-col xl="7" lg="6" md="12" class="pl-0">
+          <div>
+            <v-card-title class="about--title">Unser Service</v-card-title>
             <v-divider
               inset
               :style="{ borderColor: $vuetify.theme.themes.light.secondary }"
             />
-            <v-card-text class="font font--larger pa-12"
+            <v-card-text class="font font--larger about--text"
               >Nachdem wir Ihre Wünsche, Ihre Unternehmenskultur und Ihre Ideen
               kennengelernt haben, suchen wir nach Ihren zukünftigen
               Mitarbeitern. Wir wählen nur das Beste für Sie aus und senden
@@ -84,21 +92,12 @@
             </v-card-text>
           </div>
         </v-col>
-        <v-col></v-col>
-        <v-col class="d-flex justify-center align-center" cols="4">
-          <v-card
-            elevation="5"
-            class="d-flex justify-center align-center pa-4"
-            height="300"
-          >
-            <v-card-text
-              class="font text-center"
-              :style="{ color: $vuetify.theme.themes.light.tertiary }"
-              style="font-size: 35px"
-            >
-              Arbeiten Sie jetzt zusammen und finden Sie Ihren neuen Mitarbeiter
-            </v-card-text>
-          </v-card>
+        <v-col xl="5" lg="6" md="12" class="px-0">
+          <v-img
+            class="mt-5"
+            style="border-radius: 10px"
+            src="/images/about-us/about_1.jpg"
+          />
         </v-col>
       </v-row>
     </div>
@@ -106,11 +105,42 @@
 </template>
 
 <style lang="scss">
+@import 'assets/styles/mixins';
+@import 'assets/styles/colors';
 .about {
   color: white;
   & img {
     width: 100%;
     border-radius: 5px;
+  }
+  &--title {
+    color: $secondary;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    @include phones {
+      font-size: 24px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    @include midphones {
+      font-size: 16px;
+    }
+    @include smallphones {
+      font-size: 15px;
+    }
+  }
+  &--text {
+    color: $secondary;
+    padding: 40px;
+    @include phones {
+      font-size: 20px !important;
+      padding: 10px;
+    }
+    @include midphones {
+      font-size: 14px !important;
+    }
   }
 }
 </style>

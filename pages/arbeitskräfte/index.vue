@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="mt-0 pt-0">
-    <div class="tabs-nav">
+    <div class="tabs-nav" v-if="$vuetify.breakpoint.lgAndUp">
       <ul>
         <li v-for="(tab, tabName) in tabs" :key="tabName">
           <button
@@ -17,7 +17,37 @@
         </li>
       </ul>
     </div>
-    <article>
+    <v-tabs
+      v-if="$vuetify.breakpoint.mdAndDown"
+      show-arrows
+      centered
+      v-model="tab"
+    >
+      <v-tabs-slider color="primary"></v-tabs-slider>
+
+      <v-tab ripple v-for="i in tabMobile" :key="i.tabTitle">
+        {{ i.tabTitle }}
+      </v-tab>
+    </v-tabs>
+    <v-tabs-items v-model="tab" v-if="$vuetify.breakpoint.mdAndDown">
+      <v-tab-item
+        v-for="(item, i) in tabMobile"
+        :key="'tab_' + i"
+        class="article-container"
+      >
+        <article>
+          <div class="article-container">
+            <div class="content">
+              <h1>
+                {{ item.title }}
+              </h1>
+              <component v-bind:is="item.component" />
+            </div>
+          </div>
+        </article>
+      </v-tab-item>
+    </v-tabs-items>
+    <article v-if="$vuetify.breakpoint.lgAndUp">
       <div class="article-container" id="tab_1">
         <div v-if="activeTab === '1AFachPersonal'" class="content">
           <h1>{{ tabs['1AFachPersonal'].title }}</h1>
@@ -58,21 +88,39 @@ export default {
   data() {
     return {
       changedTab: false,
+      tab: null,
+      tabMobile: [
+        {
+          tabTitle: '1AFachPersonal',
+          title: 'Was sollten Sie sonst noch wissen über 1AFachPersonal',
+          component: Fachpersonal,
+        },
+        {
+          tabTitle: 'Karriereplanung',
+          title:
+            'Lassen Sie uns gemeinsam Ihre Karriereplanung aktiv angehen! ',
+          component: Carrer,
+        },
+
+        {
+          tabTitle: 'Personalvermittlung',
+          title: 'Personalvermittlung - wie es funktioniert ',
+          component: Recruits,
+        },
+      ],
       tabs: {
         '1AFachPersonal': {
           title: 'Was sollten Sie sonst noch wissen über 1AFachPersonal',
-          body: 'whatever the fuck',
+          component: Fachpersonal,
         },
         Karriereplanung: {
           title:
             'Lassen Sie uns gemeinsam Ihre Karriereplanung aktiv angehen! ',
-          body:
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab nam alias architecto officia, dolores animi qui debitis incidunt eius temporibus nostrum nihil soluta commodi molestiae necessitatibus ducimus amet. Suscipit, saepe!',
+          component: Carrer,
         },
         Personalvermittlung: {
           title: 'Personalvermittlung - wie es funktioniert ',
-          body:
-            'Lorem ipsasdfasdfasd alias architecto officia, dolores animi qui debitis incidunt eius temporibus nostrum nihil soluta commodi molestiae necessitatibus ducimus amet. Suscipit, saepe!',
+          component: Recruits,
         },
       },
       activeTab: '1AFachPersonal',

@@ -1,3 +1,6 @@
+@import 'assets/styles/mixins';
+
+
 .font{
   word-spacing: 1px;
   line-height: 1.7em !important;
@@ -9,12 +12,23 @@
   text-shadow: rgb(0 0 0 / 1%) 0 0 1px !important;
   &--standard{
     font-size: 16px !important;
+    @include phones{
+      font-size: 14px;
+    }
   }
   &--larger{
     font-size: 18px !important;
+  @include lowresmonitors{
+    font-size: 16px;
+  }
   }
   &--xlarge{
     font-size: 24px !important;
+  }
+  &--center{
+    @include lowresmonitors{
+      text-align: center;
+    }
   }
 }
 

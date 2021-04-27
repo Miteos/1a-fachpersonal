@@ -1,6 +1,6 @@
 <template>
-  <v-row>
-    <v-col cols="9">
+  <v-row align-content="center" justify="center">
+    <v-col cols="12" lg="8" sm="12">
       <v-card class="job_form_card">
         <h1 class="card_title">
           {{ jobName }}
@@ -8,7 +8,7 @@
         <v-spacer></v-spacer>
         <div class="inner_followed">
           <v-row>
-            <v-col class="d-flex py-2" cols="5" lg="2" md="3" sm="3">
+            <v-col class="d-flex py-5" cols="5" lg="2" md="3" sm="3">
               <img
                 class="pr-2"
                 style="max-height: 20px"
@@ -17,7 +17,7 @@
 
               Arbeitgeber:
             </v-col>
-            <v-col class="py-2" cols="7" lg="10" md="9" sm="9">
+            <v-col class="py-5" cols="7" lg="10" md="9" sm="9">
               <h4 style="font-weight: 400; color: #2e9adc">
                 {{ jobBranch }}
               </h4>
@@ -25,7 +25,7 @@
           </v-row>
           <v-spacer></v-spacer>
           <v-row>
-            <v-col class="py-2" cols="5" lg="2" md="3" sm="3">
+            <v-col class="py-5" cols="5" lg="2" md="3" sm="3">
               <div class="d-flex">
                 <img
                   class="pr-2"
@@ -37,10 +37,10 @@
             </v-col>
             <v-col
               cols="7"
-              lg="10"
+              lg="9"
               md="9"
               sm="9"
-              class="py-2"
+              class="py-5"
               style="margin-top: 4px; line-height: 1.4em"
             >
               {{ jobCategories }}
@@ -48,7 +48,7 @@
           </v-row>
           <v-spacer></v-spacer>
           <v-row>
-            <v-col class="d-flex py-2" cols="5" lg="2" md="3" sm="3">
+            <v-col class="d-flex py-5" cols="5" lg="2" md="3" sm="3">
               <img
                 class="pr-2"
                 style="max-height: 20px"
@@ -56,18 +56,18 @@
               />
               <span> Arbeitsplatz:</span>
             </v-col>
-            <v-col class="py-2" cols="7" lg="10" md="9" sm="9">{{
+            <v-col class="py-5" cols="7" lg="10" md="9" sm="9">{{
               jobLocation
             }}</v-col>
           </v-row>
         </div>
       </v-card>
     </v-col>
-    <v-col cols="3">
-      <v-card height="233px" class="job_form_card">
+    <v-col cols="12" lg="4" sm="12">
+      <v-card height="251px" class="job_form_card">
         <h1 class="card_title py-2">Kontakt</h1>
-        <v-card-text class="d-flex align-center flex-column">
-          <v-btn width="300" dark color="primary">
+        <div class="d-flex align-center flex-column">
+          <v-btn width="270" dark color="primary" class="mt-8">
             <v-icon class="pr-2">mdi-mail</v-icon>
             <a
               style="color: white; text-decoration: none"
@@ -75,7 +75,7 @@
               >pasu@1a-fachpersonal.de</a
             >
           </v-btn>
-          <v-btn width="300" dark color="primary" class="my-3">
+          <v-btn width="270" dark color="primary" class="my-3">
             <v-icon class="pr-2">mdi-phone</v-icon>
             <a
               style="color: white; text-decoration: none"
@@ -83,7 +83,7 @@
               >+49 17631795158
             </a>
           </v-btn>
-        </v-card-text>
+        </div>
       </v-card>
     </v-col>
   </v-row>
@@ -188,7 +188,6 @@ export default {
   }
 }
 .card_title {
-  font: normal 12px/16px Circular, Arial, Helvetica, sans-serif;
   text-align: left;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -200,19 +199,21 @@ export default {
   color: #333;
   height: auto;
   font-weight: 900;
-  font-size: 36px;
+  font-size: 26px;
   margin: 0;
   box-sizing: border-box;
   padding: 0 95px 30px 0;
   line-height: 1.1em;
   @media screen and (max-width: 680px) {
     font-size: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
+    padding-right: 0;
   }
 }
 .job_form_card {
   border-radius: 10px !important;
   padding: 25px 35px 20px;
+  min-height: 251px;
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1) !important;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1) !important;
   background: #fff;

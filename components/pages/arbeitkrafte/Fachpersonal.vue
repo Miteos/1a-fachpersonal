@@ -1,8 +1,8 @@
 <template>
-  <v-row>
-    <v-col cols="6">
+  <TabContent>
+    <template #text>
       <text-card :text1="text1" :text2="text2" />
-      <div>
+      <div class="list-align">
         <ul class="pl-4">
           <li class="font--larger py-3" style="list-style: none">
             <strong>{{ list.title }}</strong>
@@ -10,29 +10,32 @@
           <li
             v-for="(l, i) in list.text"
             :key="l.i"
-            class="font--standard ml-12 py-1"
+            class="font--standard ml-4 py-1"
             style="list-style: square"
           >
             {{ l }}
           </li>
         </ul>
       </div>
-    </v-col>
-    <v-col cols="6">
+    </template>
+    <template #image>
       <v-img
         contain
         src="/images/arbeitgeber/arbeit_1.jpg"
-        style="width: auto; max-height: 415px"
-    /></v-col>
-  </v-row>
+        style="width: auto; max-height: 700px"
+      />
+    </template>
+  </TabContent>
 </template>
 
 <script>
 import TextCard from '@/components/elements/TextCard'
+import TabContent from '@/components/layout/TabContent'
 export default {
   name: 'fachpersonal',
   components: {
     'text-card': TextCard,
+    TabContent,
   },
   data() {
     return {
@@ -54,3 +57,14 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+@import 'assets/styles/mixins';
+.list-align {
+  & li {
+    @include phones {
+      margin-left: 5px;
+    }
+  }
+}
+</style>

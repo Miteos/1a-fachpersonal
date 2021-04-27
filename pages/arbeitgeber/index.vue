@@ -123,6 +123,7 @@ export default {
 
 <style lang="scss">
 @import 'assets/styles/colors';
+@import 'assets/styles/mixins';
 $purple: #8a6cb4;
 $pink: #d07faf;
 .tabs-nav {
@@ -233,18 +234,46 @@ article {
     box-sizing: border-box;
     margin: 0 auto;
     background-color: $secondary;
+    @include lowresmonitors {
+      padding: 20px;
+    }
+    @include phones {
+      padding: 10px;
+    }
   }
   h1 {
     font-weight: bold;
     font-size: 42px;
     margin-bottom: 10px;
     color: $main;
+    @include lowresmonitors {
+      font-size: 26px;
+      padding: 20px 0;
+      text-align: center;
+    }
+    @include phones {
+      font-size: 18px;
+    }
+  }
+  h2 {
+    @include phones {
+      margin-left: 10px;
+      font-size: 20px;
+    }
   }
   p {
     line-height: 1.6;
-    font-size: 19px;
+    font-size: 18px;
     color: rgba(#000, 0.7);
     margin-bottom: 20px;
+    @include phones {
+      font-size: 14px;
+    }
+  }
+  li {
+    @include phones {
+      margin-left: 0 !important;
+    }
   }
 }
 .content {

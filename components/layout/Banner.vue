@@ -75,9 +75,9 @@ export default {
   justify-content: center;
   align-items: flex-end;
   &--text {
-    padding: 50px 50px 75px;
+    padding: 50px 50px 50px;
     color: $secondary;
-    font-size: 28px;
+    font-size: 24px;
     text-transform: capitalize;
   }
 }

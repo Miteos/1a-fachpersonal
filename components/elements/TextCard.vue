@@ -1,10 +1,10 @@
 <template>
   <div>
-    <v-card-title v-if="title" style="font-size: 35px; color: white"
+    <v-card-title v-if="title" class="font--xlarge font--center"
       >{{ title }}
     </v-card-title>
     <v-divider
-      inset
+      :inset="$vuetify.breakpoint.lgAndUp"
       :style="{ borderColor: $vuetify.theme.themes.light.primary }"
     />
     <div class="pt-5">
