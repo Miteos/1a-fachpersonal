@@ -45,9 +45,7 @@ export default {
       this.$route.name.toUpperCase()
     },
     computedSmallTitle() {
-      if (
-        this.$route.path === '/arbeitspl%C3%A4tze/webentwickler-php-javascript'
-      )
+      if (this.$route.path.includes('arbeitspl%C3%A4tze'))
         return 'arbeitsplätze'
       if (this.$route.name !== '/') return this.$route.name
     },

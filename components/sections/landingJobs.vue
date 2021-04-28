@@ -11,7 +11,11 @@
       </div>
       <v-row style="width: 100%">
         <v-col v-for="c in cards" :key="c.id" xl="4" lg="4" md="12">
-          <v-card hover class="landing-jobs--cards">
+          <v-card
+            :to="'arbeitsplätze' + c.to"
+            hover
+            class="landing-jobs--cards"
+          >
             <div>
               <v-img :src="c.img" />
             </div>
@@ -21,7 +25,7 @@
             <v-list>
               <v-list-item class="pl-0">
                 <v-list-item-icon
-                  ><v-icon>mdi-account</v-icon></v-list-item-icon
+                  ><v-icon>mdi-map-marker</v-icon></v-list-item-icon
                 >
                 <p class="ma-0">{{ c.vacancies }}</p></v-list-item
               >
@@ -47,31 +51,34 @@ export default {
     return {
       cards: [
         {
-          title: 'Jr. Java Developer',
+          title: 'Full-Stack-Entwickler m/w/d',
           text:
             '5-8 years of experience as a java developer and at least 2 years managing IT projects.',
-          vacancies: '22',
-          type: 'Full-time',
+          vacancies: 'Ennigerloh ',
+          type: 'Vollzeit',
           img: '/images/jobs/jobs_1.jpg',
           id: 1,
+          to: '/full-stack-entwickler',
         },
         {
-          title: 'Jr. Java Developer',
+          title: 'Webentwickler (m/w/d) PHP / JavaScript',
           text:
             '5-8 years of experience as a java developer and at least 2 years managing IT projects.',
-          vacancies: '22',
-          type: 'Full-time',
+          vacancies: '\n' + 'Köln / Sachsenheim',
+          type: 'Vollzeit',
           id: 2,
           img: '/images/jobs/jobs_2.jpg',
+          to: '/webentwickler-php-javascript',
         },
         {
-          title: 'Jr. Java Developer',
+          title: 'IT Support Engineer (m/w/d)',
           text:
             '5-8 years of experience as a java developer and at least 2 years managing IT projects.',
-          vacancies: '22',
-          type: 'Full-time',
+          vacancies: 'Dortmund',
+          type: 'Vollzeit',
           img: '/images/jobs/jobs_3.jpg',
           id: 3,
+          to: '/it-support-engineer',
         },
       ],
     }

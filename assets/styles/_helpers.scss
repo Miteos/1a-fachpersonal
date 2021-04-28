@@ -32,3 +32,13 @@
   }
 }
 
+.pad{
+  padding-left: 8px;
+  &--x{
+    @include smallphones{
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+
+  }
+}

@@ -21,8 +21,8 @@
     <template #image>
       <v-img
         contain
-        src="/images/arbeitgeber/arbeit_1.jpg"
-        style="width: auto; max-height: 415px"
+        src="/images/arbeitkrafte/ak_3.jpg"
+        style="width: auto; max-height: 600px; border-radius: 10px"
       />
     </template>
   </TabContent>

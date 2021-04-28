@@ -46,10 +46,12 @@
         <v-col xl="5" lg="6" md="12" class="px-0">
           <v-img
             style="border-radius: 10px"
+            max-height="400px"
             src="/images/about-us/about_1.jpg"
           />
         </v-col>
-        <v-col xl="7" lg="6" md="12" class="pl-0">
+        <v-col v-if="$vuetify.breakpoint.xlOnly"></v-col>
+        <v-col xl="6" lg="6" md="12" class="pl-0">
           <div>
             <v-card-title class="about--title">Unser Ziel</v-card-title>
             <v-divider
@@ -71,7 +73,7 @@
         </v-col>
       </v-row>
       <v-row class="ma-0 column-reverse">
-        <v-col xl="7" lg="6" md="12" class="pl-0">
+        <v-col xl="6" lg="6" md="12" class="pl-0">
           <div>
             <v-card-title class="about--title">Unser Service</v-card-title>
             <v-divider
@@ -91,11 +93,13 @@
             </v-card-text>
           </div>
         </v-col>
+        <v-col v-if="$vuetify.breakpoint.xlOnly"></v-col>
         <v-col xl="5" lg="6" md="12" class="px-0">
           <v-img
             class="mt-5"
+            max-height="400px"
             style="border-radius: 10px"
-            src="/images/about-us/about_1.jpg"
+            src="/images/about-us/about_2.jpg"
           />
         </v-col>
       </v-row>

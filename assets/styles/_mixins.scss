@@ -24,3 +24,6 @@
 @mixin smallphones{
   @media screen and (max-width: 440px){ @content; }
 }
+@mixin smallestphones{
+  @media screen and (max-width: 320px){ @content; }
+}

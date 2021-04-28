@@ -17,10 +17,13 @@
           class="contact--right"
         >
           <div class="contact--right--text">
-            <h1 class="contact--right--title">Get In Touch, Say Hello!</h1>
+            <h1 class="contact--right--title">
+              Nehmen Sie Kontakt auf, sagen Sie Hallo!
+            </h1>
             <p class="mb-10">
-              Have a few questions you want to ask? Do you want to know about
-              the recruitment process? Drop us a note, text, or call.
+              Haben Sie ein paar Fragen, die Sie stellen möchten? Möchtest du
+              etwas darüber wissen? der Rekrutierungsprozess? Schreiben Sie uns
+              eine Nachricht, einen Text oder einen Anruf.
             </p>
             <v-row v-for="items in info" :key="items.icon" class="py-1 ma-0">
               <v-col
@@ -36,12 +39,12 @@
                   >{{ items.icon }}</v-icon
                 ></v-col
               >
-              <v-col cols="12" sm="10" lg="11" md="11">
-                <h3 class="pb-1 pl-2 contact--right--title">
+              <v-col cols="12" sm="10" lg="11" md="11" class="pad--x">
+                <h3 class="pb-1 pad--x contact--right--title">
                   {{ items.title }}
                 </h3>
                 <a
-                  class="pl-2"
+                  class="pad--x"
                   :href="'tel:' + items.text"
                   v-if="items.type === 'button'"
                 >
@@ -49,7 +52,7 @@
                     >mdi-perm_phone_msg </v-icon
                   >{{ items.text }}</a
                 >
-                <div class="pl-2">
+                <div class="pad--x">
                   <p v-if="items.type === 'text'">
                     {{ items.text }}
                   </p>
@@ -63,19 +66,19 @@
         </v-col>
       </v-row>
       <v-card class="contact--card rounded-lg" elevation="5">
-        <v-card-title class="contact--right--title"
-          >Send your message</v-card-title
+        <v-card-title class="contact--right--title">
+          Senden Sie Ihre Nachricht</v-card-title
         >
         <v-card-text>
           <v-text-field filled label="Name" color="primary"></v-text-field>
-          <v-text-field filled label="Last Name" color="primary"></v-text-field>
+          <v-text-field filled label="Nachname" color="primary"></v-text-field>
           <v-text-field
             filled
-            label="E-mail Address"
+            label="E-Mail-Addresse"
             color="primary"
           ></v-text-field>
-          <v-textarea filled label="Message" color="primary"></v-textarea>
-          <v-file-input filled placeholder="Your CV"></v-file-input>
+          <v-textarea filled label="Botschaft" color="primary"></v-textarea>
+          <v-file-input filled placeholder="Ihr Lebenslauf"></v-file-input>
         </v-card-text>
         <v-card-actions class="d-flex justify-end">
           <v-btn
@@ -85,7 +88,7 @@
             height="40"
             color="#003D7E"
             style="margin-top: 10px"
-            >Send message</v-btn
+            >Nachricht senden</v-btn
           >
         </v-card-actions>
       </v-card>
@@ -107,22 +110,25 @@ export default {
       info: [
         {
           icon: 'mdi-mail',
-          title: 'E-mail us',
+          title: 'Schreiben Sie uns eine E-Mail',
           type: 'text',
           text:
-            'Use the contact form to send us a message or ask about our pool of talented candidates for your medical business. pasu@1a-fachpersonal.de',
+            '\n' +
+            'Verwenden Sie das Kontaktformular, um uns eine Nachricht zu senden oder nach unserem Pool talentierter Kandidaten für Ihr medizinisches Geschäft zu fragen. pasu@1a-fachpersonal.de',
         },
         {
           icon: 'mdi-phone',
-          title: 'Call Us',
+          title: 'Rufen Sie uns an',
           type: 'button',
           text: '+4917631795158',
         },
         {
           icon: 'mdi-clipboard-account-outline',
           type: 'link',
-          title: 'See Job Openings',
-          text: 'Check out our Job Openings, it’s just a few of our listings.',
+          title: 'Siehe Stellenangebote',
+          text:
+            '\n' +
+            'Schauen Sie sich unsere Stellenangebote an, es sind nur einige unserer Angebote.',
         },
       ],
     }
@@ -139,12 +145,13 @@ export default {
   width: 100%;
   display: flex;
   overflow-y: hidden;
+  overflow-x: hidden;
   flex-direction: row;
   &--left {
     background-color: $background-grey;
     min-height: 900px;
     @include phones {
-      min-height: 700px;
+      min-height: 800px;
     }
   }
   & .dark {
@@ -222,20 +229,23 @@ export default {
     @include tablets {
       min-width: 90%;
       margin: auto;
-      top: 650px;
+      top: 750px;
       left: 5%;
     }
     @include phones {
       min-width: 100%;
       padding: 10px;
-      top: 525px;
+      top: 575px;
       left: 0;
     }
     @include midphones {
       top: 525px;
     }
     @include smallphones {
-      top: 600px;
+      top: 725px;
+    }
+    @include smallestphones {
+      top: 800px;
     }
   }
 }

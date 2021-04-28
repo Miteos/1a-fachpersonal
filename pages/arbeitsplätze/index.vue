@@ -52,7 +52,11 @@
                 </tr>
                 <tr v-else-if="isMobile" :key="items.job">
                   <td>
-                    <v-container fluid class="ma-0 pa-0">
+                    <v-container
+                      fluid
+                      class="ma-0 pa-0"
+                      style="display: inline-block; width: 100%"
+                    >
                       <ul class="flex-content">
                         <li class="flex-item--full">
                           <v-img
@@ -62,7 +66,9 @@
                           />
                         </li>
                         <li class="flex-item" data-label="Titel">
-                          <span>{{ item.job }}</span>
+                          <NuxtLink :to="'arbeitsplätze' + item.to">{{
+                            item.job
+                          }}</NuxtLink>
                         </li>
                         <li class="flex-item" data-label="Erstellungsdatum">
                           <span>{{ item.date }}</span>
@@ -168,7 +174,6 @@ export default {
   methods: {
     onResize() {
       this.isMobile = window.innerWidth < 960
-      console.log(this.isMobile)
     },
   },
 }
@@ -268,7 +273,7 @@ export default {
   height: 50px;
   white-space: normal;
   font-weight: bold;
-  & span {
+  & a {
     @include smallerTablet {
       max-width: 500px;
     }
