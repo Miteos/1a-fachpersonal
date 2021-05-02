@@ -20,7 +20,7 @@ export default {
   css: ['~assets/styles.scss'],
   styleResources: ['~assets/styles.scss'],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: ['~/components/'],
@@ -29,6 +29,12 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'G-S41T4LWG8D',
+      },
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

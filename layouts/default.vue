@@ -42,6 +42,41 @@ export default {
     navigation: Nav,
     banner: Banner,
   },
+  head() {
+    return {
+      titleTemplate: `1A-Fachpersonal `,
+      meta: [
+        {
+          hid: 'og-title',
+          property: 'og:title',
+          content: '1A-Fachpersonal',
+        },
+        {
+          hid: 'og-image',
+          property: 'og:image',
+          content: 'http://mmc-group.hr//images/main-logo.png',
+        },
+        {
+          hid: 'og-url',
+          property: 'og:url',
+          content: 'https://www.1a-fachpersonal.de/',
+        },
+        {
+          hid: 'og-description',
+          property: 'og:description',
+          content:
+            'Tražite posao u inozemstvu? Naš tim stručnjaka omogućuje Vam siguran posao, smještaj, stimulativna primanja te mogućnosti napretka i daljnjeg usavršavanja. ' +
+            'Nudimo Vam učinkovito i stručno zapošljavanje svih kadrova, od visoko obrazovanih do djelatnika srednje stručne spreme. ' +
+            'Obratite nam se s povjerenjem i ostvarite nove poslovne uspjehe!',
+        },
+        {
+          hid: 'og-site_name',
+          property: 'og:site_name',
+          content: '1A-Fachpersonal',
+        },
+      ],
+    }
+  },
   data() {
     return {
       fab: false,
