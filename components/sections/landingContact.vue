@@ -70,19 +70,36 @@
           Senden Sie Ihre Nachricht</v-card-title
         >
         <v-card-text>
-          <v-text-field filled label="Name" color="primary"></v-text-field>
-          <v-text-field filled label="Nachname" color="primary"></v-text-field>
           <v-text-field
+            v-model="mailForm.first_name"
+            filled
+            label="Name"
+            color="primary"
+          ></v-text-field>
+          <v-text-field
+            v-model="mailForm.last_name"
+            filled
+            label="Nachname"
+            color="primary"
+          ></v-text-field>
+          <v-text-field
+            v-model="mailForm.from"
             filled
             label="E-Mail-Addresse"
             color="primary"
           ></v-text-field>
-          <v-textarea filled label="Botschaft" color="primary"></v-textarea>
-          <v-file-input filled placeholder="Ihr Lebenslauf"></v-file-input>
+          <v-textarea
+            v-model="mailForm.message"
+            filled
+            label="Botschaft"
+            color="primary"
+          ></v-textarea>
+          <file-upload label="cv" v-model="mailForm.file" />
         </v-card-text>
         <v-card-actions class="d-flex justify-end">
           <v-btn
             right
+            @click="sendMail"
             dark
             width="200"
             height="40"
@@ -97,7 +114,11 @@
 </template>
 
 <script>
+import fileUpload from '@/components/elements/form_elements/fileUpload'
 export default {
+  components: {
+    fileUpload,
+  },
   name: 'landingContact',
   props: {
     dark: {
@@ -107,6 +128,13 @@ export default {
   },
   data() {
     return {
+      mailForm: {
+        first_name: '',
+        last_name: '',
+        from: '',
+        message: '',
+        file: '',
+      },
       info: [
         {
           icon: 'mdi-mail',
@@ -132,6 +160,26 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    sendMail() {
+      const sub = this.mailForm.first_name + ' ' + this.mailForm.last_name
+      this.$mail.send({
+        from: this.mailForm.from,
+        subject: sub,
+        text: this.mailForm.message,
+        auth: {
+          user: '16ec7dcf7c736b',
+          pass: '5f37923245b091',
+        },
+        attachments: [
+          {
+            filename: this.mailForm.file,
+            path: 'http://localhost:5000/cvs/' + this.mailForm.file,
+          },
+        ],
+      })
+    },
   },
 }
 </script>

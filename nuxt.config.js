@@ -42,6 +42,18 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    [
+      'nuxt-mail',
+      {
+        message: {
+          to: 'matej.kapular@gmail.com',
+        },
+        smtp: {
+          host: 'smtp.mailtrap.io',
+          port: 2525,
+        },
+      },
+    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
