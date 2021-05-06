@@ -23,8 +23,6 @@
             hover
             elevation="3"
             class="landing-boxes--cards rounded-lg"
-            data-aos="flip-up"
-            data-aos-duration="1200"
           >
             <v-card-title
               style="font-size: 50px"
