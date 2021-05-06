@@ -1,5 +1,5 @@
 <template>
-  <section class="services">
+  <section class="services" data-aos="fade-down-left" data-aos-duration="800">
     <v-container fluid class="pa-0">
       <v-row style="flex-direction: row-reverse" no-gutters>
         <v-col xl="6" lg="6" md="12">

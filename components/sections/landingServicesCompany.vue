@@ -1,5 +1,11 @@
 <template>
-  <section :class="{ 'services--reverse': reverse }" class="services">
+  <section
+    :class="{ 'services--reverse': reverse }"
+    class="services"
+    data-aos="fade-down-right"
+    data-aos-mirror="false"
+    data-aos-duration="800"
+  >
     <v-container fluid class="pa-0">
       <v-row no-gutters>
         <v-col xl="6" lg="6" md="12" class="d-flex justify-center">

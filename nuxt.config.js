@@ -20,7 +20,7 @@ export default {
   css: ['~assets/styles.scss'],
   styleResources: ['~assets/styles.scss'],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
+  plugins: [{ src: '~plugins/ga.js', mode: 'client' }, '@/plugins/aos.client'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: ['~/components/'],

@@ -2,6 +2,8 @@
   <div v-if="$route.name === 'index'" class="banner">
     <div class="banner img-container" v-if="$vuetify.breakpoint.mdAndUp">
       <v-img
+        data-aos="zoom-out-down"
+        data-aos-duration="800"
         contain
         :height="$vuetify.breakpoint.mdAndDown ? 400 : 600"
         width="auto"
@@ -9,12 +11,34 @@
       />
     </div>
     <div class="banner--text">
-      <h1 v-if="$route.name !== 'index'">{{ computedTitle }}</h1>
-      <h1 v-if="$route.name === 'index'">Rekrutierung - Arbeitssuche - HR</h1>
-      <grey-btn text="kontaktiere uns" to="/kontakt" />
+      <h1
+        data-aos="fade-left"
+        data-aos-duration="800"
+        v-if="$route.name !== 'index'"
+      >
+        {{ computedTitle }}
+      </h1>
+      <h1
+        data-aos="fade-left"
+        data-aos-duration="900"
+        v-if="$route.name === 'index'"
+      >
+        Rekrutierung - Arbeitssuche - HR
+      </h1>
+      <grey-btn
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        text="kontaktiere uns"
+        to="/kontakt"
+      />
     </div>
   </div>
-  <div v-else class="small-banner">
+  <div
+    v-else
+    class="small-banner"
+    data-aos="zoom-out-down"
+    data-aos-duration="800"
+  >
     <div class="small-banner--text">
       <h1 v-if="$route.name !== 'index'">
         {{ computedSmallTitle }}

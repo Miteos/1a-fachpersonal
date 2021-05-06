@@ -1,7 +1,11 @@
 <template>
   <v-row align-content="center" justify="center">
     <v-col cols="12" lg="8" sm="12">
-      <v-card class="job_form_card">
+      <v-card
+        class="job_form_card"
+        data-aos="fade-left"
+        data-aos-duration="800"
+      >
         <h1 class="card_title">
           {{ jobName }}
         </h1>
@@ -64,7 +68,12 @@
       </v-card>
     </v-col>
     <v-col cols="12" lg="4" sm="12">
-      <v-card height="251px" class="job_form_card">
+      <v-card
+        height="251px"
+        class="job_form_card"
+        data-aos="fade-right"
+        data-aos-duration="800"
+      >
         <h1 class="card_title py-2">Kontakt</h1>
         <div class="d-flex align-center flex-column">
           <v-btn width="270" dark color="primary" class="mt-8">

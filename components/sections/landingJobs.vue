@@ -1,6 +1,10 @@
 <template>
   <v-container fluid class="pa-0">
-    <section class="landing-jobs pt-12">
+    <section
+      class="landing-jobs pt-12"
+      data-aos="fade-left"
+      data-aos-duration="800"
+    >
       <div class="landing-jobs--title">
         <h2>Ausgewählte Jobs</h2>
         <p>
@@ -12,6 +16,8 @@
       <v-row style="width: 100%">
         <v-col v-for="c in cards" :key="c.id" xl="4" lg="4" md="12">
           <v-card
+            data-aos="fade-up-right"
+            data-aos-duration="1200"
             :to="'arbeitsplätze' + c.to"
             hover
             class="landing-jobs--cards"

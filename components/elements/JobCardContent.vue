@@ -6,6 +6,8 @@
         :key="category.title"
         style="margin-top: 30px"
         class="form_cards_full_radial"
+        data-aos="fade-up-right"
+        data-aos-duration="800"
       >
         <v-card-title class="card_header_small">
           <img

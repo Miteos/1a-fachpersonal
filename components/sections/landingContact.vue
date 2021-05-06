@@ -1,6 +1,7 @@
 <template>
   <v-container class="pa-0" fluid>
-    <section class="contact">
+    <section class="contact" data-aos-duration="1200" data-aos="flip-up">
+      >
       <v-row
         class="d-flex"
         :class="{ 'flex-column-reverse': $vuetify.breakpoint.mdAndDown }"

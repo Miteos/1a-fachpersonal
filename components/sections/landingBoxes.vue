@@ -1,6 +1,10 @@
 <template>
   <v-container fluid class="pa-0">
-    <section class="landing-boxes py-12">
+    <section
+      class="landing-boxes py-12"
+      data-aos="fade-left"
+      data-aos-duration="800"
+    >
       <div class="landing-boxes--title">
         <h2>Unsere Erfahrung im Umgang mit Arbeitgebern und Arbeitnehmern.</h2>
       </div>
@@ -19,6 +23,8 @@
             hover
             elevation="3"
             class="landing-boxes--cards rounded-lg"
+            data-aos="flip-up"
+            data-aos-duration="1200"
           >
             <v-card-title
               style="font-size: 50px"

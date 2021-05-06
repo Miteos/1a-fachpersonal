@@ -1,5 +1,7 @@
 <template>
   <v-carousel
+    data-aos="fade-down-left"
+    data-aos-duration="800"
     cycle
     :height="$vuetify.breakpoint.xs ? 400 : 600"
     hide-delimiter-background

@@ -5,7 +5,7 @@
     </nuxt-link>
     <v-spacer />
     <ul v-if="$vuetify.breakpoint.mdAndUp">
-      <NuxtLink v-for="l in links" :to="l.to"
+      <NuxtLink v-for="l in links" :to="l.to" :key="l.id"
         ><li class="nav-links">
           {{ l.title }}
         </li></NuxtLink
@@ -75,7 +75,7 @@ export default {
           to: '/über-uns',
         },
         {
-          id: 4,
+          id: 5,
           title: 'Kontakt',
           to: '/kontakt',
         },

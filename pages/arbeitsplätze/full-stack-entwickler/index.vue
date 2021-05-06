@@ -6,7 +6,11 @@
       job-categories="IT"
       job-branch="1A-Fachpersonal UG"
     />
-    <job-card-content job-description="whatever the fuck">
+    <job-card-content
+      job-description="whatever the fuck"
+      data-aos="fade-up-right"
+      data-aos-duration="800"
+    >
       <template #description>
         <h3 class="py-3">Einleitung</h3>
         <p>

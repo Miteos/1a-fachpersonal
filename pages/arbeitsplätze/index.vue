@@ -1,6 +1,12 @@
 <template>
   <v-container fluid style="min-height: 100vh">
-    <v-row v-resize="onResize" column class="ma-0 d-flex justify-center">
+    <v-row
+      v-resize="onResize"
+      column
+      class="ma-0 d-flex justify-center"
+      data-aos="fade-left"
+      data-aos-duration="800"
+    >
       <v-col cols="12" xl="5" lg="5" md="5">
         <v-text-field
           filled
@@ -16,7 +22,7 @@
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
-    <v-card>
+    <v-card data-aos="fade-up-right" data-aos-duration="1100">
       <v-row>
         <v-col cols="12" class="pb-0">
           <client-only>

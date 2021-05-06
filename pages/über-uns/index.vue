@@ -1,6 +1,6 @@
 <template>
   <v-container :fluid="$vuetify.breakpoint.lgAndDown">
-    <v-row class="ma-0">
+    <v-row class="ma-0" data-aos="fade-left" data-aos-duration="800">
       <v-col cols="12" xl="8" lg="9" md="12" sm="12" class="px-0">
         <div class="mb-5">
           <v-card-title class="about--title">
@@ -41,7 +41,7 @@
         </div>
       </v-col>
     </v-row>
-    <div class="about ma-0">
+    <div class="about ma-0" data-aos="fade-right" data-aos-duration="800">
       <v-row class="ma-0">
         <v-col xl="5" lg="6" md="12" class="px-0">
           <v-img
@@ -72,7 +72,11 @@
           </div>
         </v-col>
       </v-row>
-      <v-row class="ma-0 column-reverse">
+      <v-row
+        class="ma-0 column-reverse"
+        data-aos="fade-left"
+        data-aos-duration="800"
+      >
         <v-col xl="6" lg="6" md="12" class="pl-0">
           <div>
             <v-card-title class="about--title">Unser Service</v-card-title>

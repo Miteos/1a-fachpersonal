@@ -6,7 +6,11 @@
       job-categories="IT"
       job-branch="Sundara Ramaiah Knight"
     />
-    <job-card-content job-description="whatever the fuck">
+    <job-card-content
+      job-description="placeholder"
+      data-aos="fade-up-right"
+      data-aos-duration="800"
+    >
       <template #description>
         <p>
           <strong>Wir sind</strong> Hersteller der beliebten Onlineshop-Software

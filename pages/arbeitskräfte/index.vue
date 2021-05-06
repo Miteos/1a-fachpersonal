@@ -1,6 +1,11 @@
 <template>
   <v-container fluid class="mt-0 pt-0">
-    <div class="tabs-nav" v-if="$vuetify.breakpoint.lgAndUp">
+    <div
+      class="tabs-nav"
+      v-if="$vuetify.breakpoint.lgAndUp"
+      data-aos="fade-left"
+      data-aos-duration="800"
+    >
       <ul>
         <li v-for="(tab, tabName) in tabs" :key="tabName">
           <button
@@ -48,7 +53,11 @@
         </article>
       </v-tab-item>
     </v-tabs-items>
-    <article v-if="$vuetify.breakpoint.lgAndUp">
+    <article
+      v-if="$vuetify.breakpoint.lgAndUp"
+      data-aos="fade-left"
+      data-aos-duration="800"
+    >
       <div class="article-container" id="tab_1">
         <div v-if="activeTab === '1AFachPersonal'" class="content">
           <h1>{{ tabs['1AFachPersonal'].title }}</h1>
@@ -58,10 +67,7 @@
           <h1>{{ tabs.Karriereplanung.title }}</h1>
           <career />
         </div>
-        <div
-          v-if="activeTab === 'Personalvermittlung'"
-          class="content animateLeft"
-        >
+        <div v-if="activeTab === 'Personalvermittlung'" class="content">
           <h1>{{ tabs.Personalvermittlung.title }}</h1>
           <recruits />
         </div>

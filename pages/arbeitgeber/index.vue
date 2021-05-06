@@ -1,5 +1,10 @@
 <template>
-  <v-container fluid class="mt-0 pt-0">
+  <v-container
+    fluid
+    class="mt-0 pt-0"
+    data-aos="fade-right"
+    data-aos-duration="800"
+  >
     <div class="tabs-nav" v-if="$vuetify.breakpoint.lgAndUp">
       <ul>
         <li
@@ -61,10 +66,7 @@
           <h1>{{ tabs.Personallösungen.title }}</h1>
           <personnel />
         </div>
-        <div
-          v-if="activeTab === 'Personalvermittlung'"
-          class="content animateLeft"
-        >
+        <div v-if="activeTab === 'Personalvermittlung'" class="content">
           <h1>{{ tabs.Personalvermittlung.title }}</h1>
           <recruitment />
         </div>
