@@ -199,7 +199,6 @@ $pink: #d07faf;
   width: 100%;
   display: flex;
   justify-content: center;
-  border-bottom: 20px solid #fff;
   ul {
     display: flex;
     flex-direction: row;

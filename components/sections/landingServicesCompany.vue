@@ -3,7 +3,6 @@
     :class="{ 'services--reverse': reverse }"
     class="services"
     data-aos="fade-down-right"
-    data-aos-mirror="false"
     data-aos-duration="800"
   >
     <v-container fluid class="pa-0">

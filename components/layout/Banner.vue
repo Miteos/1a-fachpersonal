@@ -113,7 +113,7 @@ export default {
   align-items: center;
   justify-content: center;
   @include phones {
-    height: 65vh;
+    height: 100vh;
   }
   @include tablets {
     flex-direction: column;
