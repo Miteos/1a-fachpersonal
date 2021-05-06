@@ -16,8 +16,6 @@
       <v-row style="width: 100%">
         <v-col v-for="c in cards" :key="c.id" xl="4" lg="4" md="12">
           <v-card
-            data-aos="fade-up-right"
-            data-aos-duration="1200"
             :to="'arbeitsplätze' + c.to"
             hover
             class="landing-jobs--cards"

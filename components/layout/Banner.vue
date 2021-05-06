@@ -3,7 +3,7 @@
     <div class="banner img-container" v-if="$vuetify.breakpoint.mdAndUp">
       <v-img
         data-aos="zoom-out-down"
-        data-aos-duration="800"
+        data-aos-duration="900"
         contain
         :height="$vuetify.breakpoint.mdAndDown ? 400 : 600"
         width="auto"
@@ -12,8 +12,9 @@
     </div>
     <div class="banner--text">
       <h1
-        data-aos="fade-left"
-        data-aos-duration="800"
+        data-aos="zoom-out-down"
+        data-aos-duration="900"
+        data-aos-once="true"
         v-if="$route.name !== 'index'"
       >
         {{ computedTitle }}
@@ -25,12 +26,7 @@
       >
         Rekrutierung - Arbeitssuche - HR
       </h1>
-      <grey-btn
-        data-aos="fade-right"
-        data-aos-duration="1000"
-        text="kontaktiere uns"
-        to="/kontakt"
-      />
+      <grey-btn text="kontaktiere uns" to="/kontakt" />
     </div>
   </div>
   <div

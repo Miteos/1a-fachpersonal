@@ -1,5 +1,5 @@
 <template>
-  <button class="grey-button">
+  <button class="grey-button" data-aos="fade-left" data-aos-duration="900">
     <a :href="to">{{ text.toUpperCase() }}</a>
   </button>
 </template>
