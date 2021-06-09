@@ -57,7 +57,9 @@
 </template>
 
 <script>
+import aosMixin from '~/mixins/aos'
 export default {
+  mixins: [aosMixin],
   name: 'Landing-services-company',
   props: {
     reverse: {

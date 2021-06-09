@@ -81,7 +81,9 @@ import Fachpersonal from '@/components/pages/arbeitkrafte/Fachpersonal.vue'
 import Carrer from '@/components/pages/arbeitkrafte/Career.vue'
 import Recruits from '@/components/pages/arbeitkrafte/Recruits.vue'
 
+import aosMixin from '~/mixins/aos'
 export default {
+  mixins: [aosMixin],
   components: {
     fachpersonal: Fachpersonal,
     career: Carrer,

@@ -99,7 +99,9 @@
 </template>
 
 <script>
+import aosMixin from '~/mixins/aos'
 export default {
+  mixins: [aosMixin],
   props: {
     jobCategories: {
       type: String,

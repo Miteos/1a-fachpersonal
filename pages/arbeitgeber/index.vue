@@ -95,7 +95,9 @@ import Process from '@/components/pages/arbeitgeber/Process.vue'
 import Employee from '@/components/pages/arbeitgeber/Employee.vue'
 import Services from '@/components/pages/arbeitgeber/Services.vue'
 
+import aosMixin from '~/mixins/aos'
 export default {
+  mixins: [aosMixin],
   components: {
     industries: Industries,
     recruitment: Recruitment,

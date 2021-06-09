@@ -5,7 +5,9 @@
 </template>
 
 <script>
+import aosMixin from '~/mixins/aos'
 export default {
+  mixins: [aosMixin],
   props: {
     text: '',
     to: '',

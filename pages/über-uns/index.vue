@@ -110,7 +110,12 @@
     </div>
   </v-container>
 </template>
-
+<script>
+import aosMixin from '~/mixins/aos'
+export default {
+  mixins: [aosMixin],
+}
+</script>
 <style lang="scss">
 @import 'assets/styles/mixins';
 @import 'assets/styles/colors';

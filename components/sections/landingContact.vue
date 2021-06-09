@@ -120,7 +120,9 @@
 
 <script>
 import fileUpload from '@/components/elements/form_elements/fileUpload'
+import aosMixin from '~/mixins/aos'
 export default {
+  mixins: [aosMixin],
   components: {
     fileUpload,
   },

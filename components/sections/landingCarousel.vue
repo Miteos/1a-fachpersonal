@@ -19,7 +19,9 @@
 </template>
 
 <script>
+import aosMixin from '~/mixins/aos'
 export default {
+  mixins: [aosMixin],
   name: 'landingCarousel',
   data() {
     return {

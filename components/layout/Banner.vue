@@ -46,7 +46,9 @@
 <script>
 import landingContact from '@/components/sections/landingContact'
 import greyBtn from '@/components/elements/buttons/greyBtn'
+import aosMixin from '~/mixins/aos'
 export default {
+  mixins: [aosMixin],
   name: 'Banner',
   components: {
     'landing-contact': landingContact,
