@@ -102,7 +102,7 @@
 export default {
   props: {
     jobCategories: {
-      type: Array,
+      type: String,
     },
     jobName: {
       type: String,

@@ -31,11 +31,15 @@ export default {
         'deep-purple accent-4',
       ],
       slides: [
-        'Was Sie über 1A-Spezialisten als Arbeitgeber und Arbeitnehmer wissen sollten Die Suche nach Bewerbern in den größten Jobportalen.' +
-          'Die Vorgespräche mit den Antragstellern.' +
-          'Die Auswahl geeigneter Bewerber für Ihr Unternehmen',
-        'Umgang mit Ihren Daten Ihre Daten sind bei uns sicher. Ihre Daten werden auf Basis der Allgemeinen Datenschutzverordnung (DSGVO) verarbeitet und gespeichert',
-        'Unser Service Nach Erhalt Ihrer Unterlagen wird sich Ihr persönlicher Ansprechpartner innerhalb von 24 Stunden mit Ihnen in Verbindung setzen.',
+        'Personalberatung und Headhunt aus einer Hand  1A -Fachpersonal.',
+        ' Dank eines nahezu perfekten Executive Search Instrumentariums sowie herausragender Managementdiagnostiken und Organisationsdiagnostiken findet die 1A - Fachpersonal für Sie die passenden Führungskräfte und Manager.',
+        'Dabei profitiert Ihr Unternehmen von der Beratungskompetenz und Branchenerfahrung.',
+        'Ihre Daten sind bei uns sicher. Ihre Daten werden auf\n' +
+          'Basis der Allgemeinen Datenschutzverordnung (DSGVO)\n' +
+          'verarbeitet und gespeichert.',
+        'Nach Erhalt Ihrer Unterlagen wird sich garantiert Ihr\n' +
+          'persönlicher Ansprechpartner innerhalb von 24 Stunden\n' +
+          'mit Ihnen in Verbindung setzen.',
       ],
     }
   },
@@ -53,15 +57,15 @@ export default {
   background-repeat: no-repeat;
 }
 .carousel-text {
-  font-size: 32px !important;
+  font-size: 28px !important;
   max-width: 800px;
   text-align: center;
   @include tablets {
-    font-size: 26px !important;
+    font-size: 24px !important;
     padding: 30px;
   }
   @include smallphones {
-    font-size: 16px !important;
+    font-size: 14px !important;
     padding: 30px;
   }
 }

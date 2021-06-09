@@ -135,11 +135,18 @@ export default {
       ],
       jobs: [
         {
-          job: 'Full-Stack-Entwickler m/w/d',
-          date: '15. Februar 2021',
-          clicks: 28,
+          job: 'Ingenieur (m/w/d)-Versorgungstechnik Führend und motivierend',
+          date: '9. Juni 2021',
+          clicks: 0,
+          img: '/images/jobs/jobs_3.jpg',
+          to: '/ingenieur-versorgungstechnik-führend-und-motivierend',
+        },
+        {
+          job: 'Full Stack Web Developer (m/w/d)',
+          date: '9. Juni 2021',
+          clicks: 0,
           img: '/images/jobs/jobs_1.jpg',
-          to: '/full-stack-entwickler',
+          to: '/full-stack-web-developer',
         },
         {
           job: 'Java Entwickler (m/w/d) - Individuelle Software',
@@ -147,6 +154,13 @@ export default {
           clicks: 30,
           img: '/images/jobs/jobs_4.jpg',
           to: '/java-entwickler-individuelle-software',
+        },
+        {
+          job: 'Full-Stack-Entwickler m/w/d',
+          date: '15. Februar 2021',
+          clicks: 28,
+          img: '/images/jobs/jobs_1.jpg',
+          to: '/full-stack-entwickler',
         },
         {
           job: 'IT Support Engineer (m/w/d)',
@@ -276,7 +290,7 @@ export default {
   flex-wrap: wrap;
   padding: 20px 5px 5px;
   max-width: 764px;
-  height: 50px;
+  height: 60px;
   white-space: normal;
   font-weight: bold;
   & a {

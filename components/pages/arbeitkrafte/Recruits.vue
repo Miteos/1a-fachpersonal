@@ -43,21 +43,30 @@ export default {
         {
           title: 'Die Suche',
           text:
-            'Nachdem Sie Ihre Karriereziele und einen Lebenslauf mit Qualifikationen gesendet haben, werden wir nach dem richtigen Arbeitgeber suchen.',
+            'Nachdem Sie Ihre Karriereziele und einen Lebenslauf mit Qualifikationen gesendet haben,\n' +
+            'werden wir nach dem richtigen Arbeitgeber suchen.',
         },
         {
           title: 'Der erste Kontakt',
           text:
-            'Der erste Kontakt mit Ihrem neuen Arbeitgeber erfolgt über uns',
+            'Der erste Kontakt mit Ihrem neuen Arbeitgeber erfolgt über uns.',
         },
         {
           title: 'Immer da für dich',
           text:
-            'Auch nach einem erfolgreichen Praktikum bleiben wir jederzeit Ihr Ansprechpartner.',
+            'Auch nach einer erfolgreichen Vermittlung bleiben wir jederzeit Ihr Ansprechpartner.',
         },
       ],
       text1:
-        'Personalvermittlung ist eine Form der Dienstleistung, bei der erfahrene Jobvermittler die Schnittstelle zwischen Fachkräften und Unternehmen darstellen. Immer mehr Firmen und Bewerber aus allen Branchen nehmen unsere Services als professioneller Personalvermittler in Anspruch. Kein Wunder, schließlich ist das Prinzip einfach und gleichzeitig äußerst effektiv: Arbeitgeber wenden sich an die 1A - Fachpersonal, um vakante Positionen schnellstmöglich mit passendem Personal zu besetzen. Diese offenen Stellen werden dann in unserer Jobbörse veröffentlicht. Als Arbeitssuchende/r können Sie ohne weiteres auf die verschiedenen zugreifen und sich direkt bei uns bewerben.',
+        'Die Personalvermittlung ist eine Form der Dienstleistung, bei der erfahrene Jobvermittler\n' +
+        'die Schnittstelle zwischen Fachkräften und Unternehmen darstellen. Immer mehr\n' +
+        'Unternehmen und Bewerber aus allen Branchen nehmen unsere Services als\n' +
+        'professioneller Personalvermittler in Anspruch. Kein Wunder, schließlich ist das Prinzip\n' +
+        'einfach und gleichzeitig äußerst effektiv: Arbeitgeber wenden sich an die 1A -\n' +
+        'Fachpersonal, um vakante Positionen schnellstmöglich mit passendem Personal zu\n' +
+        'besetzen. Diese offenen Stellen werden dann in unserer Jobbörse veröffentlicht. Als\n' +
+        'Arbeitssuchende/r können Sie ohne weiteres auf die verschiedenen zugreifen und sich\n' +
+        'direkt bei uns bewerben.',
     }
   },
 }

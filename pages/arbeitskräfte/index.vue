@@ -59,8 +59,8 @@
       data-aos-duration="800"
     >
       <div class="article-container" id="tab_1">
-        <div v-if="activeTab === '1AFachPersonal'" class="content">
-          <h1>{{ tabs['1AFachPersonal'].title }}</h1>
+        <div v-if="activeTab === '1A-Fachpersonal'" class="content">
+          <h1>{{ tabs['1A-Fachpersonal'].title }}</h1>
           <fachpersonal />
         </div>
         <div v-if="activeTab === 'Karriereplanung'" class="content">
@@ -98,7 +98,7 @@ export default {
       tab: null,
       tabMobile: [
         {
-          tabTitle: '1AFachPersonal',
+          tabTitle: '1A-Fachpersonal',
           title: 'Was sollten Sie sonst noch wissen über 1AFachPersonal',
           component: Fachpersonal,
         },
@@ -116,7 +116,7 @@ export default {
         },
       ],
       tabs: {
-        '1AFachPersonal': {
+        '1A-Fachpersonal': {
           title: 'Was sollten Sie sonst noch wissen über 1AFachPersonal',
           component: Fachpersonal,
         },
@@ -130,7 +130,7 @@ export default {
           component: Recruits,
         },
       },
-      activeTab: '1AFachPersonal',
+      activeTab: '1AFachpersonal',
     }
   },
   computed: {
@@ -139,7 +139,7 @@ export default {
     },
   },
   mounted() {
-    this.activeTab = '1AFachPersonal'
+    this.activeTab = '1A-Fachpersonal'
   },
   methods: {
     setTabActive(tab) {

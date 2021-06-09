@@ -6,7 +6,9 @@
       data-aos-duration="800"
     >
       <div class="landing-boxes--title">
-        <h2>Unsere Erfahrung im Umgang mit Arbeitgebern und Arbeitnehmern.</h2>
+        <h2>
+          Unsere Erfahrungen im Umgang mit Arbeitgebern und Arbeitnehmern.
+        </h2>
       </div>
       <v-row style="width: 100%" justify="center">
         <v-col

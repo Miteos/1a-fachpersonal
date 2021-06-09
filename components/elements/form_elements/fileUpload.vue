@@ -4,7 +4,7 @@
       :value="computedFile"
       :label="label"
       chips
-      style="max-width: 200px"
+      filled
       class="mr-5"
       @change="selectFile"
       @click:clear="clearFile"
@@ -69,7 +69,6 @@ export default {
             ...this.params,
           },
         })
-        console.log(this.params)
         this.$emit('input', response.data.filename)
       } else if (this.required && !this.value)
         throw new Error(`${this.label || 'Slika'} je potrebna`)

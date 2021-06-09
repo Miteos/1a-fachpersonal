@@ -1,6 +1,9 @@
 import colors from 'vuetify/es5/util/colors'
+import env from './env'
 
 export default {
+  mode: 'universal',
+  env: env.env,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - 1a-fachpersonal',
@@ -57,7 +60,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseUrl: env.apiUrl,
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

@@ -57,9 +57,7 @@ export default {
       small: false,
     }
   },
-  mounted() {
-    console.log(this.$route)
-  },
+  mounted() {},
   computed: {
     computedTitle() {
       this.$route.name.toUpperCase()

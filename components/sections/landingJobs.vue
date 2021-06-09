@@ -8,9 +8,8 @@
       <div class="landing-jobs--title">
         <h2>Ausgewählte Jobs</h2>
         <p>
-          Hier sind einige Möglichkeiten mit den besten Unternehmen auf dem
-          heutigen Markt. Treten Sie unserem Netzwerk bei und wir können
-          zusammenarbeiten, um herauszufinden, was zu Ihnen passt.
+          Treten Sie unserem Netzwerk bei und wir können zusammenarbeiten, um
+          herauszufinden, welche neue Herausforderung am besten zu Ihnen passt.
         </p>
       </div>
       <v-row style="width: 100%">

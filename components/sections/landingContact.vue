@@ -22,9 +22,10 @@
               Nehmen Sie Kontakt auf, sagen Sie Hallo!
             </h1>
             <p class="mb-10">
-              Haben Sie ein paar Fragen, die Sie stellen möchten? Möchtest du
-              etwas darüber wissen? der Rekrutierungsprozess? Schreiben Sie uns
-              eine Nachricht, einen Text oder einen Anruf.
+              Haben Sie Fragen, die Sie stellen möchten? Möchten Sie etwas
+              darüber wissen, wie zum Beispiel über unser Rekrutierungsprozess?
+              Dann schreiben Sie uns ganz unverbindlich eine Nachricht oder
+              rufen Sie unter den angegebenen Kontaktdaten an.
             </p>
             <v-row v-for="items in info" :key="items.icon" class="py-1 ma-0">
               <v-col
@@ -56,6 +57,9 @@
                 <div class="pad--x">
                   <p v-if="items.type === 'text'">
                     {{ items.text }}
+                    <a href="mailto:pasu@1a-fachpersonal.de"
+                      >(pasu@1a-fachpersonal.de)</a
+                    >.
                   </p>
                   <nuxt-link v-if="items.type === 'link'" to="/arbeitsplätze">{{
                     items.text
@@ -95,7 +99,7 @@
             label="Botschaft"
             color="primary"
           ></v-textarea>
-          <file-upload label="cv" v-model="mailForm.file" />
+          <file-upload label="CV" v-model="mailForm.file" />
         </v-card-text>
         <v-card-actions class="d-flex justify-end">
           <v-btn
@@ -142,8 +146,8 @@ export default {
           title: 'Schreiben Sie uns eine E-Mail',
           type: 'text',
           text:
-            '\n' +
-            'Verwenden Sie das Kontaktformular, um uns eine Nachricht zu senden oder nach unserem Pool talentierter Kandidaten für Ihr medizinisches Geschäft zu fragen. pasu@1a-fachpersonal.de',
+            'Verwenden Sie das Kontaktformular, um uns eine Nachricht zu senden\n' +
+            'oder nach unserem Pool talentierter Kandidaten (w/m/d) zu fragen',
         },
         {
           icon: 'mdi-phone',
