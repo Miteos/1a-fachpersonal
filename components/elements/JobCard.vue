@@ -88,7 +88,7 @@
             <v-icon class="pr-2">mdi-phone</v-icon>
             <a
               style="color: white; text-decoration: none"
-              href="tel:+49 17631795158 "
+              href="tel:+4917631795158"
               >+49 17631795158
             </a>
           </v-btn>
