@@ -1,11 +1,11 @@
 <template>
-  <v-container
-    fluid
-    class="mt-0 pt-0"
-    data-aos="fade-right"
-    data-aos-duration="800"
-  >
-    <div class="tabs-nav" v-if="$vuetify.breakpoint.lgAndUp">
+  <v-container fluid class="mt-0 pt-0">
+    <div
+      class="tabs-nav"
+      v-if="$vuetify.breakpoint.lgAndUp"
+      data-aos="fade-right"
+      data-aos-duration="800"
+    >
       <ul>
         <li
           v-for="(tab, tabName) in tabs"
@@ -124,13 +124,13 @@ export default {
         {
           tabTitle: 'Personallösungen',
           title: 'Personallösungen für Ihren Bedarf',
-          component: Recruitment,
+          component: Personnel,
         },
         {
           tabTitle: 'Personalvermittlung',
           title:
             'Personalvermittlung – Kompetenz durch Spezialisierung, Erfahrung und frische Ideen!',
-          component: Personnel,
+          component: Recruitment,
         },
         {
           tabTitle: 'Prozess',
