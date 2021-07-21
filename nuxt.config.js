@@ -9,7 +9,7 @@ export default {
     titleTemplate: '%s - 1a-fachpersonal',
     title: '1a-fachpersonal',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'de',
     },
     meta: [
       { charset: 'utf-8' },
