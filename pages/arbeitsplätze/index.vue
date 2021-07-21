@@ -18,7 +18,7 @@
         ></v-text-field>
       </v-col>
       <v-col v-if="$vuetify.breakpoint.mdAndUp" xl="2" lg="2" md="2">
-        <v-btn width="100px" height="40"><v-icon>mdi-printer</v-icon></v-btn>
+        <!--        <v-btn width="100px" height="40"><v-icon>mdi-printer</v-icon></v-btn>-->
       </v-col>
       <v-spacer></v-spacer>
     </v-row>

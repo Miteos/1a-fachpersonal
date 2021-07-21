@@ -24,23 +24,30 @@
             </div>
             <v-card-title> {{ c.title }}</v-card-title>
             <v-divider></v-divider>
-            <v-card-text>{{ c.text }} </v-card-text>
-            <v-list>
-              <v-list-item class="pl-0">
-                <v-list-item-icon
-                  ><v-icon>mdi-map-marker</v-icon></v-list-item-icon
+            <div class="landing-jobs--cards--content">
+              <v-card-text
+                >{{ c.text }}
+                <ul v-for="l in c.list">
+                  <li>{{ l }}</li>
+                </ul>
+              </v-card-text>
+              <v-list>
+                <v-list-item class="pl-0">
+                  <v-list-item-icon
+                    ><v-icon>mdi-map-marker</v-icon></v-list-item-icon
+                  >
+                  <p class="ma-0">{{ c.vacancies }}</p></v-list-item
                 >
-                <p class="ma-0">{{ c.vacancies }}</p></v-list-item
-              >
-              <v-list-item class="pl-0">
-                <v-list-item-icon
-                  ><v-icon
-                    >mdi-clock-time-four-outline</v-icon
-                  ></v-list-item-icon
-                >
-                <p class="ma-0">{{ c.type }}</p>
-              </v-list-item>
-            </v-list>
+                <v-list-item class="pl-0">
+                  <v-list-item-icon
+                    ><v-icon
+                      >mdi-clock-time-four-outline</v-icon
+                    ></v-list-item-icon
+                  >
+                  <p class="ma-0">{{ c.type }}</p>
+                </v-list-item>
+              </v-list>
+            </div>
           </v-card>
         </v-col>
       </v-row>
@@ -58,7 +65,14 @@ export default {
         {
           title: 'Full-Stack-Entwickler m/w/d',
           text:
-            '5-8 years of experience as a java developer and at least 2 years managing IT projects.',
+            'Eigenverantwortliche Beratung, Gestaltung & Umsetzung der IT-Projekte unserer Kunden\n' +
+            '\n' +
+            'Technische Umsetzung komplexer fachlicher Anforderungen in klassischen und agilen Entwicklungsteams\n' +
+            '\n' +
+            'Entwicklung moderner Client-Server Anwendungen mit Web Frontend und Java Backend für unsere Kunden\n' +
+            '\n' +
+            'partnerschaftliche Zusammenarbeit & offene Kommunikation mit unseren Kunden & Stakeholdern',
+          list: null,
           vacancies: 'Ennigerloh ',
           type: 'Vollzeit',
           img: '/images/jobs/jobs_1.jpg',
@@ -68,7 +82,14 @@ export default {
         {
           title: 'Webentwickler (m/w/d) PHP / JavaScript',
           text:
-            '5-8 years of experience as a java developer and at least 2 years managing IT projects.',
+            'Konzeption, Planung und Umsetzung umfangreicher Online-Projekte/Webapplikationen\n' +
+            'Weiterentwicklung bereits bestehender Systeme\n' +
+            'Implementieren und Testen von Softwarekomponenten',
+          list: [
+            'Konzeption, Planung und Umsetzung umfangreicher Online-Projekte/Webapplikationen',
+            'Weiterentwicklung bereits bestehender Systeme',
+            'Implementieren und Testen von Softwarekomponenten',
+          ],
           vacancies: '\n' + 'Köln / Sachsenheim',
           type: 'Vollzeit',
           id: 2,
@@ -78,7 +99,12 @@ export default {
         {
           title: 'IT Support Engineer (m/w/d)',
           text:
-            '5-8 years of experience as a java developer and at least 2 years managing IT projects.',
+            'In Deinem Arbeitsalltag im IT-Team bei Swyx übernimmst du als IT-Support-Ingenieur innerhalb unserer Organisation die erste Anlaufstelle für ICT-bezogene Fragen',
+          list: [
+            'die Beantwortung von Fragen und hilfst Mitarbeitern weiter',
+            'Mitverantwortung für das Management der (Office IT) Windows Server, der Microsoft Azure Plattform und der Microsoft Office 365 Umgebung die',
+            'Bearbeitung von 1st und 2nd line internen ITSupportanfragen\n',
+          ],
           vacancies: 'Dortmund',
           type: 'Vollzeit',
           img: '/images/jobs/jobs_3.jpg',
@@ -131,7 +157,12 @@ export default {
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    min-height: 900px;
     margin: 100px 0;
+    &--content {
+      display: flex;
+      flex-direction: column;
+    }
     @include highresmonitors {
       font-size: 16px;
       margin: 50px 0;

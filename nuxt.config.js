@@ -14,7 +14,14 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          '1A – Fachpersonal – Ihr Personalvermittler\n' +
+          '\n' +
+          'Gemeinsam finden wir die passenden Talente für Sie. Wir vermitteln Fach- und Führungskräfte sowie Freiberufler seit über 10 Jahren weltweit. Großes Kandidatennetzwerk. Hohe Flexibilität. Fachliche Kompetenz. Personalisierte Betreuung.',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
